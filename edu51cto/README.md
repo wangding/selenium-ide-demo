@@ -4,5 +4,8 @@
 http://edu.51cto.com
 
 ## 测试案例
-* 打开学生学习记录页面，检查学习时长>0分钟
+* 
 
+## 自动化任务
+* 打开所有学生的学习记录页面  [studyLog.html](https://github.com/wangding/seIDE/blob/master/edu51cto/studyLog.html)
+ 
