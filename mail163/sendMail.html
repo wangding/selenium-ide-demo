@@ -28,13 +28,38 @@
 </tr>
 <tr>
 	<td>selectFrame</td>
-	<td>index=8</td>
+	<td>//section/div/div/div[1]/div[2]/iframe</td>
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>xpath=/html/body/div[2]/div[1]/div[2]/div[1]/section/section/div/div/div[1]/div[2]/textarea</td>
-	<td>test_mailContent</td>
+	<td>storeXpathCount</td>
+	<td>//section/div/div/div[1]/div[2]/iframe</td>
+	<td>num</td>
+</tr>
+<tr>
+	<td>storeCssCount</td>
+	<td>css=input.nui-editableAddr-ipt</td>
+	<td>num</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${num}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=body.nui-scroll</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>css=body.nui-scroll</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=body.nui-scroll</td>
+	<td>input value in rich text editor!!!</td>
 </tr>
 <tr>
 	<td>click</td>
