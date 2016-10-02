@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.hostedredmine.com/" />
+<title>在auto_test_demo项目下面测试问题相关的操作</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">在auto_test_demo项目下面测试问题相关的操作</td></tr>
+</thead><tbody>
+<!--新建问题-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=新建问题</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=issue_subject</td>
+	<td>test_title</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=issue_description</td>
+	<td>test_content</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=issue_status_id</td>
+	<td>label=In Progress</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=issue_assigned_to_id</td>
+	<td>label=&lt;&lt; 我 &gt;&gt;</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Task *: test_title - auto_test_demo - Online Project Management :: Free Redmine Hosting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.wiki &gt; p</td>
+	<td>test_content</td>
+</tr>
+<!--更新问题-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'编辑')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=issue_done_ratio</td>
+	<td>label=100 %</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=issue_status_id</td>
+	<td>label=Closed</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=issue_notes</td>
+	<td>test_modify</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#issue-form &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='note-1']/ul/li[2]</td>
+	<td>% 完成 从 0 变更为 100</td>
+</tr>
+<!--删除问题-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'删除')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>您确定要删除选中的问题吗？</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
