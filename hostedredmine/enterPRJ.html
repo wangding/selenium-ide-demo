@@ -11,11 +11,21 @@
 <thead>
 <tr><td rowspan="1" colspan="3">enterPRJ</td></tr>
 </thead><tbody>
-<!--进入auto_test_demo项目-->
+<!--进入auto_test_demo项目并验证-->
 <tr>
 	<td>selectAndWait</td>
 	<td>id=project_quick_jump_box</td>
 	<td>label=auto_test_demo</td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>概述 - auto_test_demo - Online Project Management :: Free Redmine Hosting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>auto_test_demo</td>
 </tr>
 
 </tbody></table>
