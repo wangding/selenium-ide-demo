@@ -11,13 +11,23 @@
 <thead>
 <tr><td rowspan="1" colspan="3">计算器加法测试</td></tr>
 </thead><tbody>
-<!--打开在线计算器网站-->
+<!--打开在线计算器网站并验证-->
 <tr>
 	<td>open</td>
 	<td>/</td>
 	<td></td>
 </tr>
-<!--测试1+1=2-->
+<tr>
+	<td>assertTitle</td>
+	<td>计算器在线计算_计算机</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=img[alt=&quot;在线计算器&quot;]</td>
+	<td></td>
+</tr>
+<!--测试并验证1+1=2-->
 <tr>
 	<td>highlight</td>
 	<td>id=simple1</td>
