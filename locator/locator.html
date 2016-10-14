@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="file:///E:/wd/seIDE/locator/" />
+<title>locator</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">locator</td></tr>
+</thead><tbody>
+<!--打开需要测试的练习网页-->
+<tr>
+	<td>open</td>
+	<td>sample.html</td>
+	<td></td>
+</tr>
+<!--【演示各种定位技术】-->
+<!--identifier定位-->
+<tr>
+	<td>highlight</td>
+	<td>identifier=loginForm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>identifier=password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>identifier=continue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>continue</td>
+	<td></td>
+</tr>
+<!--ID定位-->
+<tr>
+	<td>highlight</td>
+	<td>id=loginForm</td>
+	<td></td>
+</tr>
+<!--Name定位-->
+<tr>
+	<td>highlight</td>
+	<td>name=username</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>name=password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>name=continue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>name=continue value=Clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>name=continue Clear</td>
+	<td></td>
+</tr>
+<!--XPath定位，参考：http://www.phpstudy.net/e/xpath/xpath_syntax.html-->
+<tr>
+	<td>highlight</td>
+	<td>xpath=/html/body/form[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>xpath=//form[@id='loginForm']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>xpath=//form[input/@name='username']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>//input[@name='username']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>//form[@id='loginForm']/input[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>//input[@name='continue'][@type='button']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>//form[@id='loginForm']/input[3]</td>
+	<td></td>
+</tr>
+<!--Link Text定位-->
+<tr>
+	<td>highlight</td>
+	<td>link=sample页面</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>link=locator测试案例</td>
+	<td></td>
+</tr>
+<!--DOM定位，参考：http://www.w3school.com.cn/htmldom/dom_navigation.asp-->
+<tr>
+	<td>highlight</td>
+	<td>dom=document.getElementById('loginForm')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>dom=document.forms['loginForm']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>dom=document.forms[0]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>document.forms[0].username</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>document.forms[0].elements['username']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>document.forms[0].elements[0]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>document.forms[0].elements[3]</td>
+	<td></td>
+</tr>
+<!--CSS定位，参考：http://www.w3school.com.cn/cssref/css_selectors.asp-->
+<tr>
+	<td>highlight</td>
+	<td>css=form#loginForm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>css=input[name=&quot;username&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>css=input.required[type=&quot;text&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>css=input.passfield</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>css=#loginForm input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>css=form&gt;input</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
