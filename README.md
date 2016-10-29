@@ -2,7 +2,7 @@
 用selenium IDE 录制的各种网站的自动化测试脚本，用于教学或生产案例。
 
 如何参与项目：
-* 请先学习视频课程： ![Selenium IDE WEB 自动化测试（上）](http://edu.51cto.com/course/course_id-7320.html)
+* 请先学习视频课程：[Selenium IDE WEB 自动化测试（上）](http://edu.51cto.com/course/course_id-7320.html)
 * 本项目希望从您那里获得如下帮助：
   * 项目文档维护，主要是每个文件夹下面的README.md文件的信息更新和维护；
   * 对已有网站脚本的修改和完善，如果你觉得自动化测试脚本的测试功能点可以更多一些，或者有优化的地方；
