@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="file:///E:/wd/seIDE/locator/" />
+<link rel="selenium.base" href="file:///c:/wd/seIDE/locator/" />
 <title>locator</title>
 </head>
 <body>
@@ -11,14 +11,21 @@
 <thead>
 <tr><td rowspan="1" colspan="3">locator</td></tr>
 </thead><tbody>
+<!--注意：-->
+<!--本测试案例的 BaseURL 是: file:///c:/wd/seIDE/locator/-->
+<!--下面两种方法都可以保证本案例的正确运行，请任选一种：-->
+<!--1. 在 C 盘建立与 BaseURL 相同的目录结构，把 sample.html 文件放到该文件下；-->
+<!--2. 在源视图修改本测试案例的 BaseURL ，确保 BaseURL 的地址是 sample.html 文件存放的路径；-->
+<!--请确保，上面1, 2两种方法已经采取一种，并准备就绪。-->
+<!--************************* Let's go! *******************************-->
 <!--打开需要测试的练习网页-->
 <tr>
 	<td>open</td>
 	<td>sample.html</td>
 	<td></td>
 </tr>
-<!--【演示各种定位技术】-->
-<!--identifier定位-->
+<!--【演示七种定位技术】-->
+<!--一、identifier定位-->
 <tr>
 	<td>highlight</td>
 	<td>identifier=loginForm</td>
@@ -39,13 +46,13 @@
 	<td>continue</td>
 	<td></td>
 </tr>
-<!--ID定位-->
+<!--二、ID定位-->
 <tr>
 	<td>highlight</td>
 	<td>id=loginForm</td>
 	<td></td>
 </tr>
-<!--Name定位-->
+<!--三、Name定位-->
 <tr>
 	<td>highlight</td>
 	<td>name=username</td>
@@ -71,7 +78,7 @@
 	<td>name=continue Clear</td>
 	<td></td>
 </tr>
-<!--XPath定位，参考：http://www.phpstudy.net/e/xpath/xpath_syntax.html-->
+<!--四、XPath定位，参考：http://www.phpstudy.net/e/xpath/xpath_syntax.html-->
 <tr>
 	<td>highlight</td>
 	<td>xpath=/html/body/form[1]</td>
@@ -107,7 +114,7 @@
 	<td>//form[@id='loginForm']/input[3]</td>
 	<td></td>
 </tr>
-<!--Link Text定位-->
+<!--五、Link Text定位-->
 <tr>
 	<td>highlight</td>
 	<td>link=sample页面</td>
@@ -118,7 +125,7 @@
 	<td>link=locator测试案例</td>
 	<td></td>
 </tr>
-<!--DOM定位，参考：http://www.w3school.com.cn/htmldom/dom_navigation.asp-->
+<!--六、DOM定位，参考：http://www.w3school.com.cn/htmldom/dom_navigation.asp-->
 <tr>
 	<td>highlight</td>
 	<td>dom=document.getElementById('loginForm')</td>
@@ -154,7 +161,7 @@
 	<td>document.forms[0].elements[3]</td>
 	<td></td>
 </tr>
-<!--CSS定位，参考：http://www.w3school.com.cn/cssref/css_selectors.asp-->
+<!--七、CSS定位，参考：http://www.w3school.com.cn/cssref/css_selectors.asp-->
 <tr>
 	<td>highlight</td>
 	<td>css=form#loginForm</td>
