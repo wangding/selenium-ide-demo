@@ -7,5 +7,5 @@ http://edu.51cto.com
 * 
 
 ## 自动化任务
-* 打开所有学生的学习记录页面  [studyLog.html](https://github.com/wangding/seIDE/blob/master/edu51cto/studyLog.html)
+* 打开所有学生的学习记录页面  [studyLog.html](studyLog.html)
  
