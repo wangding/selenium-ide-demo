@@ -19,5 +19,5 @@
 * 网站必须是互联网上能访问到的
 * 脚本一律用 Selenium IDE 专用的格式，即：html 格式存放
 * 脚本以功能点来组织测试案例
-* 脚本录制的环境是 Slenium IDE 2.9, Firefox 49
+* 脚本录制的环境是 Selenium IDE 2.9, Firefox 49
 
