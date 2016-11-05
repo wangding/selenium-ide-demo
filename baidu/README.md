@@ -4,4 +4,4 @@
 http://www.baidu.com
 
 ## 测试案例
-* 搜索关键字，并验证搜索页面正常 [search.html](https://github.com/wangding/seIDE/blob/master/baidu/search.html)
+* 搜索关键字，并验证搜索页面正常 [search.html](search.html)
