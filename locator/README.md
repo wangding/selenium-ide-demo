@@ -9,5 +9,5 @@ sample.html就是被测教学示例页面，请把该文件和测试案例脚本
 
 使用方法见下面的屏幕截图或见教学视频。
 
-![使用方法](https://github.com/wangding/seIDE/blob/master/locator/manual.png)
+![使用方法](manual.png)
 
