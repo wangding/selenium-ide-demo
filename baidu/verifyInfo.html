@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.baidu.com" />
+<title>verifyInfo</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">verifyInfo</td></tr>
+</thead><tbody>
+<!--注意：-->
+<!--执行下面测试案例之前，请确保你的百度账户是退出登录的状态。-->
+<!--因为，登录状态打开的百度首页面和非登录状态的百度首页面不相同。-->
+<!--这个脚本测试的是非登录状态下的百度首页面的页面元素。-->
+<!----------------------------- Let's go. ---------------------------------------->
+<!--【打开百度首页面】-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--【断言首页面打开正确】-->
+<tr>
+	<td>assertTitle</td>
+	<td>百度一下，你就知道</td>
+	<td></td>
+</tr>
+<!--【验证页面中的元素】-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=糯米</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div#lg&gt;img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=//div[2]/p/b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//div[2]/p/b</td>
+	<td>手机百度</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
