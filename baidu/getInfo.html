@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.baidu.com" />
+<title>hello baidu</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">hello baidu</td></tr>
+</thead><tbody>
+<!--【echo 百度网站首页面上的信息】-->
+<!--打开百度首页-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--获取首页Title信息，然后echo打印-->
+<tr>
+	<td>storeTitle</td>
+	<td>wdBaiduTitle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>获取首页Title信息，然后echo打印</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${wdBaiduTitle}</td>
+	<td></td>
+</tr>
+<!--获取首页面上的文字，然后echo打印-->
+<tr>
+	<td>storeBodyText</td>
+	<td>wdBaiduBody</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>获取首页面上的文字，然后echo打印</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${wdBaiduBody}</td>
+	<td></td>
+</tr>
+<!--获取首页HTML代码，并打印-->
+<tr>
+	<td>storeHtmlSource</td>
+	<td>wdBaiduSource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>获取首页HTML代码，并打印</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${wdBaiduSource}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
