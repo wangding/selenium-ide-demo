@@ -1,0 +1,1426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.atool.org/" />
+<title>手机号码归属地查询测试案例</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">手机号码归属地查询测试案例</td></tr>
+</thead><tbody>
+<!--【被测网站：http://www.atool.org】-->
+<!--【被测功能：手机号码归属地查询】-->
+<!--【测试案例设计：http://processon.com/view/581805e0e4b09047a82bd47c】-->
+<!--【说明：】-->
+<!--【1. 本测试案例执行，有两个验证失败。通过百度号码认证平台验证，确定这是ATOOL网站的两个bug。】-->
+<!--【2. 百度号码认证平台网址：http://haoma.baidu.com/query】-->
+<!--【作者：刘金梦】-->
+<!---------------------------------- Let's go! ----------------------------------------------->
+<!--打开手机归属地查询工具网页-->
+<tr>
+	<td>open</td>
+	<td>/phonenumber.php</td>
+	<td></td>
+</tr>
+<!--通过性测试案例-->
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13401001111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'北京',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13001001111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'北京',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>15301001111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'北京',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13820861111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'天津',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13163021111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'天津',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13388091111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'天津',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13681881111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'上海',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>18621921111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'上海',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>18017001111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*,<br /> province:'上海',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13983861111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'重庆',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13271851111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'重庆',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>15340551111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'重庆',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>15733101111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'河北',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>15603111111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'河北',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13333381111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'河北',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>18300661111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'河南',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13253591111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'河南',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>17719891111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'河南',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>15987181111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'云南',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>15559601111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'云南',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>18187051111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'云南',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13464001111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'辽宁',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13002401111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'辽宁',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13304001111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'辽宁',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13603601111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'黑龙江',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13204501111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'黑龙江',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13303601111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'黑龙江',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13407311111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'湖南',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13203101111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'湖南',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13307311111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'湖南',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13407101111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'湖北',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13207101111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'湖北',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13307101111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'湖北',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13470731111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'安徽',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13205531111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'安徽',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13305531111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'安徽',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13405321111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'山东',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13205321111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'山东',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13305321111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'山东',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13565401111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'新疆',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13201201111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'新疆',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13309911111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'新疆',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13400001111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'江苏',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13205211111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'江苏',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13301511111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'江苏',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13429101111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'浙江',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13205711111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'浙江',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13305711111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'浙江',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13407071111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'江西',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13207071111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'江西',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13307071111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'江西',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13457401111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'广西',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13207741111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'广西',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13307741111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'广西',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13519311111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'甘肃',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13209311111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'甘肃',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13309311111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'甘肃',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13403481111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'山西',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13203481111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'山西',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13303481111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'山西',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13451321111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'内蒙古',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13204721111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'内蒙古',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13304721111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'内蒙古',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13402941111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'陕西',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13201401111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'陕西',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13309181111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'陕西',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13404341111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'吉林',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13204341111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'吉林',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13304341111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'吉林',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13400601111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'福建',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13205921111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'福建',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13306001111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'福建',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13508521111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'贵州',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13208521111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'贵州',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13308521111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'贵州',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13411151111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'广东',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13202001111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'广东',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13302201111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'广东',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13619721111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'青海',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13209721111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'青海',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13309721111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'青海',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13518901111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'西藏',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13228901111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'西藏',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13308901111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'西藏',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13408001111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'四川',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13008101111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'四川',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13308001111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'四川',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13409501111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'宁夏',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13209501111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'宁夏',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13309501111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'宁夏',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13518001111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:*,<br /> province:'海南',<br /> catName:'中国移动',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13208901111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'海南',<br /> catName:'中国联通',*<br />}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>13307501111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>{<br /> mts:'*',<br /> province:'海南',<br /> catName:'中国电信',*<br />}</td>
+</tr>
+</tbody></table>
+</body>
+</html>
