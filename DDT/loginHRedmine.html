@@ -19,7 +19,7 @@
 <!--加载测试数据-->
 <tr>
 	<td>loadTestData</td>
-	<td>file:///e:/wd/seIDE/DDT/accountData.xml</td>
+	<td>file:///c:/wd/seIDE/DDT/accountData.xml</td>
 	<td></td>
 </tr>
 <!--循环取出登录账号，进行登录测试-->
@@ -54,18 +54,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
 	<td>storeLocation</td>
 	<td>curURL</td>
-	<td></td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${curURL}</td>
 	<td></td>
 </tr>
 <tr>
@@ -123,7 +113,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>id=flash_error</td>
-	<td>无效的用户名或密码</td>
+	<td>Invalid user or password</td>
 </tr>
 <tr>
 	<td>goto</td>
