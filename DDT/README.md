@@ -4,10 +4,39 @@ DDT Data Drive Test，数据驱动测试，也称为参数化。
 
 ## DDT 方案一：js 数据文件
 
+---
+
+
+
 ## DDT 方案二：CVS 数据文件 
 
+---
+
+通过下面的 js 扩展，实现对 CSV 数据文件读取操作。
+
+- [CSVRead_Selenium-IDE.js](CSVRead_Selenium-IDE.js) 
+- [Selenium IDE: Flow Control](https://addons.mozilla.org/en-US/firefox/addon/flow-control/)
+
+### 安装配置
+
+如下图所示：
+
+![csv](images/csv.png)
+
+### 被测网站：hosted redmine
+
+hosted redmine：http://www.hostedredmine.com/
+
+_测试案例及数据文件_
+
+- [loginHRedmine-csv.html](loginHRedmine-csv.html)  
+  不同账户的用户名和密码，进行登录身份验证。
+- [accountData.csv](accountData.csv)
+  用户名和密码列表的数据文件。  
+  
 ## DDT 方案三：XML 数据文件
 
+---
 通过下面三个 js 扩展，实现对 XML 数据文件载入和读取操作。
 
 - [user-extensions.js](user-extensions.js)
@@ -61,7 +90,9 @@ hosted redmine：http://www.hostedredmine.com/
 _测试案例及数据文件_
 
 - [loginHRedmine.html](loginHRedmine.html)  
-  不同账户的登录身份验证，两个变量：用户名和密码。
+  用不同账户的用户名和密码，进行登录身份验证。  
+- [accountData.xml(accountData.xml)  
+  用户名和密码的列表。
 
 ### 被测网站：ATOOL
 
@@ -73,4 +104,5 @@ _测试案例及数据文件_
 
 ## DDT 方案：JSON 数据文件
 
+---
 【貌似还没有资料】
