@@ -73,27 +73,6 @@
 	<td>storedVars['curURL'] == &quot;http://www.hostedredmine.com/login&quot;</td>
 	<td>LOGIN_FAIL</td>
 </tr>
-<!--LOGIN_FAIL-->
-<tr>
-	<td>label</td>
-	<td>LOGIN_FAIL</td>
-	<td></td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${userName} , ${passWord} , &quot;LOGIN_FAIL&quot;</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>id=flash_error</td>
-	<td>无效的用户名或密码</td>
-</tr>
-<tr>
-	<td>goto</td>
-	<td>END</td>
-	<td></td>
-</tr>
 <!--LOGIN_PASS-->
 <tr>
 	<td>label</td>
@@ -124,6 +103,27 @@
 	<td>clickAndWait</td>
 	<td>link=退出</td>
 	<td></td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>END</td>
+	<td></td>
+</tr>
+<!--LOGIN_FAIL-->
+<tr>
+	<td>label</td>
+	<td>LOGIN_FAIL</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${userName} , ${passWord} , &quot;LOGIN_FAIL&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=flash_error</td>
+	<td>无效的用户名或密码</td>
 </tr>
 <tr>
 	<td>goto</td>
