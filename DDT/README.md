@@ -91,7 +91,7 @@ _测试案例及数据文件_
 
 - [loginHRedmine.html](loginHRedmine.html)  
   用不同账户的用户名和密码，进行登录身份验证。  
-- [accountData.xml(accountData.xml)  
+- [accountData.xml](accountData.xml)  
   用户名和密码的列表。
 
 ### 被测网站：ATOOL
