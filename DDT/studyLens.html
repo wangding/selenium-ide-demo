@@ -19,13 +19,18 @@
 <!--加载测试数据-->
 <tr>
 	<td>loadTestData</td>
-	<td>file:///c:/wd/seIDE/DDT/studentData.xml</td>
+	<td>file:///e:/wd/seIDE/DDT/studentData.xml</td>
 	<td></td>
 </tr>
 <tr>
 	<td>store</td>
 	<td>0</td>
 	<td>totalLen</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>stdNum</td>
 </tr>
 <!--循环查询学习时长数据并求和-->
 <tr>
@@ -54,6 +59,16 @@
 	<td>totalLen</td>
 </tr>
 <tr>
+	<td>storeEval</td>
+	<td>Number(storedVars['stdNum']) + 1</td>
+	<td>stdNum</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${stdNum}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>endWhile</td>
 	<td></td>
 	<td></td>
@@ -66,7 +81,7 @@
 </tr>
 <tr>
 	<td>echo</td>
-	<td>javascript{'平均学习时长' + storedVars['totalLen']/27}</td>
+	<td>javascript{'平均学习时长' + storedVars['totalLen']/storedVars['stdNum']}</td>
 	<td></td>
 </tr>
 </tbody></table>
