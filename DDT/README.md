@@ -6,8 +6,35 @@ DDT Data Drive Test，数据驱动测试，也称为参数化。
 
 ---
 
+通过下面的流程控制扩展，实现对 JS 数据文件的循环读取操作。
 
+- [Selenium IDE: Flow Control](https://addons.mozilla.org/en-US/firefox/addon/flow-control/)
 
+## 数据格式
+
+.js 文件中按下面的方式存放测试数据
+
+```javascript
+varname = "value"
+```
+
+## 安装配置
+
+需要把 .js 数据文件，在 Options 对话框中进行设置，如下图所示：
+
+![js-data](images\js-data.js)
+
+### 被测网站：百度
+
+百度：http://www.baidu.com
+
+_测试案例及数据文件_
+
+- [baiduSch-JS.html](baiduSch-JS.html)  
+  循环读取 JS 数据文件中的数据，打开百度首页，搜索相应的关键字
+- [dataSource.js](dataSource.js)  
+  本 .js 格式的数据文件包含了需要在百度上检索的关键字列表
+  
 ## DDT 方案二：CVS 数据文件 
 
 ---
