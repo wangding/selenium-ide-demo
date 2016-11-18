@@ -22,7 +22,7 @@ varname = "value"
 
 需要把 .js 数据文件，在 Options 对话框中进行设置，如下图所示：
 
-![js-data](images\js-data.png)
+![js-data](images/js-data.png)
 
 ### 被测网站：百度
 
