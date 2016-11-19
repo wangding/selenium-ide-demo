@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script type="text/javascript">
+    function output(resultText){
+      document.getElementById('output').childNodes[0].nodeValue=resultText;
+    }
+
+    function show_confirm(){
+      var confirmation=confirm("Chose an option.");
+      if (confirmation==true){
+        output("Confirmed.");
+      }
+      else{
+        output("Rejected!");
+      }
+    }
+
+    function show_alert(){
+      alert("I'm blocking!");
+      output("Alert is gone.");
+    }
+    function show_prompt(){
+      var response = prompt("What's the best web QA tool?","Selenium");
+      output(response);
+    }
+    function open_window(windowName){
+      window.open("newWindow.html",windowName);
+    }
+    </script>
+</head>
+<body>
+
+  <input type="button" id="btnConfirm" onclick="show_confirm()" value="Show confirm box" />
+  <input type="button" id="btnAlert" onclick="show_alert()" value="Show alert" />
+  <input type="button" id="btnPrompt" onclick="show_prompt()" value="Show prompt" />
+  <a href="newWindow.html" id="lnkNewWindow" target="_blank">New Window Link</a>
+  <input type="button" id="btnNewNamelessWindow" onclick="open_window()" value="Open Nameless Window" />
+  <input type="button" id="btnNewNamedWindow" onclick="open_window('Mike')" value="Open Named Window" />
+
+  <br />
+  <span id="output">
+  </span>
+</body>
+</html>
