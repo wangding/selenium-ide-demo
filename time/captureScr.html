@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://time.tianqi.com/" />
-<title>captureScreen</title>
+<title>捕获网站页面的测试案例</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">captureScreen</td></tr>
+<tr><td rowspan="1" colspan="3">捕获网站页面的测试案例</td></tr>
 </thead><tbody>
 <!--说明：-->
 <!--1. 本测试案例说明了，Selenium IDE 支持对象类型的变量。如：wdDate，就是日期类型的对象；-->
@@ -34,11 +34,20 @@
 </tr>
 <!--捕获当前网页-->
 <tr>
+	<td>waitForText</td>
+	<td>id=times</td>
+	<td>*20*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=times</td>
+	<td>*20*</td>
+</tr>
+<tr>
 	<td>captureEntirePageScreenshot</td>
 	<td>c:\wd-tmp\${fileName}</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
