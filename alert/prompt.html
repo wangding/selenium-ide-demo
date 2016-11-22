@@ -17,7 +17,7 @@
 	<td>sample.html</td>
 	<td></td>
 </tr>
-<!--弹出提示弹窗，并验证-->
+<!--弹出提示弹窗，输入文本 Selenium IDE，并验证-->
 <tr>
 	<td>answerOnNextPrompt</td>
 	<td>Selenium IDE</td>
@@ -37,6 +37,28 @@
 	<td>verifyText</td>
 	<td>id=output</td>
 	<td>Selenium IDE</td>
+</tr>
+<!--弹出提示弹窗，直接取消弹窗，并验证-->
+<!--==注意：取消弹窗与输入空值，视为相同-->
+<tr>
+	<td>answerOnNextPrompt</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnPrompt</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertPrompt</td>
+	<td>正在学习的这个 web 自动化测试工具是什么？</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=output</td>
+	<td></td>
 </tr>
 </tbody></table>
 </body>
