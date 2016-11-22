@@ -17,7 +17,50 @@
 	<td>sample.html</td>
 	<td></td>
 </tr>
-<!--弹出确认弹窗，并验证-->
+<!--弹出确认弹窗，点击取消按钮，并验证-->
+<tr>
+	<td>chooseCancelOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnConfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>通过这门课一定能学会 web 自动化测试！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=output</td>
+	<td>已经取消！</td>
+</tr>
+<!--弹出确认弹窗，点击确定按钮，并验证-->
+<tr>
+	<td>chooseOkOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnConfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>通过这门课一定能学会 web 自动化测试！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=output</td>
+	<td>已经确认。</td>
+</tr>
+<!--弹出确认弹窗，点击确定按钮，并验证-->
+<!--==注意：默认情况下 Selenium IDE 会触发 OK 按钮，所以 chooseOkOnNextConfirmation 命令可以省略-->
 <tr>
 	<td>click</td>
 	<td>id=btnConfirm</td>
