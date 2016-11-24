@@ -8,7 +8,6 @@
 <body>
 <table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
 <tr><td><b>Test Suite</b></td></tr>
-<tr><td><a href="../edu51cto/studyLog.html">studyLog</a></td></tr>
 <tr><td><a href="globbing.html">globbing</a></td></tr>
 <tr><td><a href="regexp.html">regexp</a></td></tr>
 <tr><td><a href="test.html">test</a></td></tr>
