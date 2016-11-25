@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.hostedredmine.com/" />
+<title>登录hostedredmine的测试案例</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">登录hostedredmine的测试案例</td></tr>
+</thead><tbody>
+<!--注意：-->
+<!--1. 本案例演示了利用隐含 javascript 对定位器参数进行抽象化，便于脚本的维护-->
+<!--2. 请在 Options 对话框中配置 Selenium Core Extensions 为 locatorData.js-->
+<!------------------------- Let's go! ----------------------------------->
+<!--一、打开hostedredmine网站首页-->
+<tr>
+	<td>open</td>
+	<td>/login</td>
+	<td></td>
+</tr>
+<!--二、错误登录并验证登录状态-->
+<!--1. 密码错误-->
+<tr>
+	<td>type</td>
+	<td>javascript{locatorData.userName}</td>
+	<td>test_2016_1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>javascript{locatorData.passWord}</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>javascript{locatorData.btnLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>javascript{locatorData.errorMsg}</td>
+	<td>无效的用户名或密码</td>
+</tr>
+<!--2. 用户名错误-->
+<tr>
+	<td>type</td>
+	<td>javascript{locatorData.userName}</td>
+	<td>test_2006_2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>javascript{locatorData.passWord}</td>
+	<td>Passw0rd!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>javascript{locatorData.btnLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>javascript{locatorData.errorMsg}</td>
+	<td>无效的用户名或密码</td>
+</tr>
+<!--三、正常登录并验证登录状态-->
+<tr>
+	<td>type</td>
+	<td>javascript{locatorData.userName}</td>
+	<td>test_2016_1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>javascript{locatorData.passWord}</td>
+	<td>Passw0rd!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>javascript{locatorData.btnLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>我的工作台 - Online Project Management :: Free Redmine Hosting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>我的工作台 - Online Project Management :: Free Redmine Hosting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>javascript{locatorData.loginName}</td>
+	<td>登录为 test_2016_1</td>
+</tr>
+</tbody></table>
+</body>
+</html>
