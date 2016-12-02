@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.processon.com/" />
+<title>复制和重命名文件夹</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">复制和重命名文件夹</td></tr>
+</thead><tbody>
+<!--打开我的文件页面-->
+<tr>
+	<td>open</td>
+	<td>/diagrams#</td>
+	<td></td>
+</tr>
+<!--复制一个测试文件夹2到测试文件夹1中-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.content_container</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#583ba989e4b0b0c8d7c533fc &gt; div.title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=file-more</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=menu_mc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.dlg_content &gt; span.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@id='58398bece4b086d1e7cab1bb']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn_submit_copy</td>
+	<td></td>
+</tr>
+<!--进入测试文件夹1验证-->
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=测试文件夹1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.content_container</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=测试文件夹2</td>
+	<td>测试文件夹2</td>
+</tr>
+<!--将测试文件夹2重命名为测2-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/ul/li[2]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=file-more</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=menu_edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=folder_new_title</td>
+	<td>测2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn_submit_folder</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.content-left</td>
+	<td></td>
+</tr>
+<!--恢复初始状态-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/ul/li[2]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=file-del</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='global_confirm_window']/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.dir &gt; a</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
