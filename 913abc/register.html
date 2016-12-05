@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.913abc.com" />
+<title>913abc网站用户注册测试案例</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">913abc网站用户注册测试案例</td></tr>
+</thead><tbody>
+<!--注意：-->
+<!--1. 这个案例是一个典型的 AJAX 应用，制作脚本常见的问题是，录制成功，快速回放出现问题。-->
+<!--2. 需要在每一步操作前，增加一个 waitForXXX 命令。-->
+<!--3. 注册信息中 Name 和 Mobile 信息不能重复，用了随机数。 -->
+<!--------------------------  Let's go! ----------------------------->
+<!--Step0：打开网站的注册页面-->
+<tr>
+	<td>open</td>
+	<td>home/register</td>
+	<td></td>
+</tr>
+<!--Step1：免费注册-->
+<tr>
+	<td>type</td>
+	<td>id=Name</td>
+	<td>javascript{‘wangding’ + Math.round(Math.random()*1000)}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>123456</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Newpassword</td>
+	<td>123456</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Mobile</td>
+	<td>javascript{'13'&nbsp;&nbsp;+ Math.round(Math.random()*10) + '8202761' + Math.round(Math.random()*10)}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=check</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.suc_a.submit</td>
+	<td></td>
+</tr>
+<!--Step2：选择模板-->
+<tr>
+	<td>waitForTextPresent</td>
+	<td>当前位置：首页&gt;免费使用&gt;选择模板</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.PM_module1 &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=NoStep</td>
+	<td></td>
+</tr>
+<!--Step3：创建完成-->
+<tr>
+	<td>waitForTextPresent</td>
+	<td>当前位置：首页 &gt; 免费使用 &gt; 选择模板 &gt; 创建完成</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=管理后台</td>
+	<td></td>
+</tr>
+<!--Step4：进入管理后台-->
+<tr>
+	<td>waitForTitle</td>
+	<td>网站管理 &gt; 网站列表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>网站管理 &gt; 网站列表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=退出</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
