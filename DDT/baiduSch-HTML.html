@@ -17,6 +17,11 @@
 	<td>n</td>
 </tr>
 <tr>
+	<td>storeEval</td>
+	<td>new Array(6)</td>
+	<td>phrase</td>
+</tr>
+<tr>
 	<td>open</td>
 	<td>/test/baiduSchData.html</td>
 	<td></td>
@@ -32,8 +37,8 @@
 	<td>ph</td>
 </tr>
 <tr>
-	<td>echo</td>
-	<td>${ph}</td>
+	<td>runScript</td>
+	<td>javascript{storedVars.phrase[storedVars.n] = storedVars.ph}</td>
 	<td></td>
 </tr>
 <tr>
@@ -43,6 +48,41 @@
 </tr>
 <tr>
 	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{storedVars.phrase.length}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${n} &lt; 6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{storedVars.phrase[storedVars.n]}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${n} + 1</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
 	<td></td>
 	<td></td>
 </tr>
