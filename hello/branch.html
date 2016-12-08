@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://github.com/wangding/courses/SeleniumIDE" />
+<title>分支判断测试案例</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">分支判断测试案例</td></tr>
+</thead><tbody>
+<!--注意：-->
+<!--1. 请安装 Selenium IDE: Flow Control 插件；-->
+<!-------------------  Let's go! -------------------->
+<!--变量初始化-->
+<tr>
+	<td>store</td>
+	<td>30</td>
+	<td>age</td>
+</tr>
+<!--判断年龄是否成年-->
+<tr>
+	<td>gotoIf</td>
+	<td>${age} &lt; 20</td>
+	<td>BOY</td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>MAN</td>
+	<td></td>
+</tr>
+<!--BOY-->
+<tr>
+	<td>label</td>
+	<td>BOY</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>你是个小男孩</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>END</td>
+	<td></td>
+</tr>
+<!--MAN-->
+<tr>
+	<td>label</td>
+	<td>MAN</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>你是个大男人</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>END</td>
+	<td></td>
+</tr>
+<!--END-->
+<tr>
+	<td>label</td>
+	<td>END</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>《剧中》</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

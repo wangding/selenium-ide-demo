@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.baidu.com/" />
+<title>DDT JS 数据格式的百度搜索测试案例</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DDT JS 数据格式的百度搜索测试案例</td></tr>
+</thead><tbody>
+<!--【注意：】-->
+<!--1. 确保正确 js 数据文件 dataSource.js ；-->
+<!--2. 增加或删除数据文件中的数据后，一定要修改 while 循环中的判断条件；-->
+<!------------------------------------- Let's go! ----------------------------------------->
+<!--【DDT: Data Drive Test 数据驱动测试，百度搜索测试案例】-->
+<!--初始化循环变量-->
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>n</td>
+</tr>
+<!--循环取数据，在百度上搜索-->
+<tr>
+	<td>while</td>
+	<td>${n} &lt; 5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>search${n}</td>
+	<td>phrase</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=kw</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=kw</td>
+	<td>${phrase}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=su</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>${phrase}_百度搜索</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>${phrase}_百度搜索</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.nums</td>
+	<td>*百度为您找到相关结果*个</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${n} + 1</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

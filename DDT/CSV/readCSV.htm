@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://change-this-to-the-site-you-are-testing/" />
+<title>readcsv</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">readcsv</td></tr>
+</thead><tbody>
+<tr>
+	<td>readCSV</td>
+	<td>file://C:/wd/seIDE/DDT/readCSVData.csv</td>
+	<td></td>
+</tr>
+<!--Storing value from file at position1,1, similar to Excel cell position-->
+<tr>
+	<td>storeCellValue</td>
+	<td>testvalue</td>
+	<td>1,1</td>
+</tr>
+<!--Printing valur, you can use this variable for any element selection-->
+<!--Reading a CSV file-->
+<tr>
+	<td>echo</td>
+	<td>${testvalue}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>testvalue1</td>
+	<td>1,2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${testvalue1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>y</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>value</td>
+	<td>${x},${y}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${value}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

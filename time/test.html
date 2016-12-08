@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="file:///c:/wd/seIDE/time/" />
+<title>test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test</td></tr>
+</thead><tbody>
+<!--打开示例网页-->
+<tr>
+	<td>open</td>
+	<td>sample.html</td>
+	<td></td>
+</tr>
+<!--用正则表达式文本模式验证文本-->
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>regexp:20[0-9]{2}/[0-9]{2}/[0-9]{2}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2</td>
+	<td>regexp:20[0-9]{2}/[0-9]{2}/[0-9]{2} [上下]午</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3</td>
+	<td>regexp:20[0-9]{2}/[0-9]{2}/[0-9]{2} [上下]午[0-9]{1,2}:[0-9]{2}:[0-9]{2}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4</td>
+	<td>regexp:[MTWFS][a-z]{2}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h5</td>
+	<td>regexp:[MTWFS][a-z]{2}, [0-9]{2}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h6</td>
+	<td>regexp:[MTWFS][a-z]{2}, [0-9]{2} [JFMASOND][a-z]{2} 20[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} GMT</td>
+</tr>
+</tbody></table>
+</body>
+</html>

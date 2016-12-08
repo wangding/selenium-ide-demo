@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>弹窗教学案例页面</title>
+  <script type="text/javascript">
+    function output(resultText){
+      document.getElementById('output').childNodes[0].nodeValue=resultText;
+    }
+    function show_confirm(){
+      var confirmation=confirm("通过这门课一定能学会 web 自动化测试！");
+      if (confirmation==true){
+        output("已经确认。");
+      }
+      else{
+        output("已经取消！");
+      }
+    }
+    function show_alert(){
+      alert("一定要给课程 5 分好评啊！");
+      output("警告弹窗消失了。");
+    }
+    function show_prompt(){
+      var response = prompt("正在学习的这个 web 自动化测试工具是什么？","Selenium IDE");
+      output(response);
+    }
+   </script>
+</head>
+<body>
+	<h1 style="text-align: center;">弹窗教学案例页面</h1>
+	<hr />
+  <input type="button" id="btnAlert" onclick="show_alert()" value="显示 alert 弹窗" />    
+  <input type="button" id="btnConfirm" onclick="show_confirm()" value="显示 confirm 弹窗" />
+  <input type="button" id="btnPrompt" onclick="show_prompt()" value="显示 prompt 弹窗" />
+  <hr />
+  <p id="output">  </p>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://time.tianqi.com/" />
+<title>captureScreen2</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">captureScreen2</td></tr>
+</thead><tbody>
+<!--说明：-->
+<!--1. 本测试案例需要在 Options 选项框里设置 Selenium IDE extendsions  为 funs.js ，才能支持 fileName() 自定义函数-->
+<!--2. 通过参数化可以使脚本每次运行，在目录下建立不同文件名的网站截图；-->
+<!------------------------- Let's go! ---------------------------------->
+<!--初始化系统变量-->
+<tr>
+	<td>storeEval</td>
+	<td>fileName()</td>
+	<td>fileName</td>
+</tr>
+<!--打开时间校准网-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--捕获当前网页-->
+<tr>
+	<td>waitForText</td>
+	<td>id=times</td>
+	<td>*20*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=times</td>
+	<td>*20*</td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td>c:\wd-tmp\${fileName}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

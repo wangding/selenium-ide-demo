@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.processon.com/" />
+<title>移动文件夹的测试案例</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">移动文件夹的测试案例</td></tr>
+</thead><tbody>
+<!--打开我的文件页面-->
+<tr>
+	<td>open</td>
+	<td>/diagrams#</td>
+	<td></td>
+</tr>
+<!--将测试文件夹2移至测试文件夹1-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.content_container</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#583ba989e4b0b0c8d7c533fc &gt; div.title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=file-more</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=menu_mc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.dlg_content &gt; span.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@id='58398bece4b086d1e7cab1bb']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn_submit_move</td>
+	<td></td>
+</tr>
+<!--进入测试文件夹1进行验证，并把测试文件夹2移回我的文件-->
+<tr>
+	<td>click</td>
+	<td>link=测试文件夹1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.content_container</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=测试文件夹2</td>
+	<td>测试文件夹2</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#583ba989e4b0b0c8d7c533fc &gt; div.title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=file-more</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=menu_mc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn_submit_move</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.dir &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.content_container</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

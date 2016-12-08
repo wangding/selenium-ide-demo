@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://github.com/wangding/courses/SeleniumIDE" />
+<title>循环测试案例</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">循环测试案例</td></tr>
+</thead><tbody>
+<!--注意：-->
+<!--1. 请安装 Selenium IDE: Flow Control 插件；-->
+<!-------------------  Let's go! -------------------->
+<!--变量初始化-->
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>n</td>
+</tr>
+<!--循环打印 n-->
+<tr>
+	<td>while</td>
+	<td>${n}&lt;10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${n}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['n']++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

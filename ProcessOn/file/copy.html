@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://www.processon.com/" />
+<title>复制文件的测试案例</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">复制文件的测试案例</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/diagrams#</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.content_container</td>
+	<td></td>
+</tr>
+<!--复制测试文件1至测试文件夹2-->
+<tr>
+	<td>clickAt</td>
+	<td>//li[4]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=file-more</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=menu_mc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.dlg_content &gt; span.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@id='583ba989e4b0b0c8d7c533fc']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn_submit_copy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.content_container</td>
+	<td></td>
+</tr>
+<!--进入测试文件夹2验证-->
+<tr>
+	<td>click</td>
+	<td>link=测试文件夹2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=测试文件1</td>
+	<td>测试文件1</td>
+</tr>
+<!--恢复初始状态-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/ul/li[2]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=file-del</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='global_confirm_window']/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.empty_tip</td>
+	<td>您的文件夹为空 您可以点击“新建文件”创建新的文件。</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.dir &gt; a</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

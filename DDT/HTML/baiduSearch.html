@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://wangding.github.io/" />
+<title>baiduSchHTML</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">baiduSchHTML</td></tr>
+</thead><tbody>
+<!--初始化循环变量和数组-->
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array(6)</td>
+	<td>phrase</td>
+</tr>
+<!--打开数据页面，循环装入测试数据-->
+<tr>
+	<td>open</td>
+	<td>/test/baiduSchData.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>window.document.getElementsByTagName('tr').length</td>
+	<td>rows</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${n} &lt; ${rows}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//tr[${n}]/td</td>
+	<td>ph</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{storedVars.phrase[storedVars.n] = storedVars.ph}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${n} + 1</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--执行测试数据-->
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${n} &lt; ${rows}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{storedVars.phrase[storedVars.n]}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://www.baidu.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=kw</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=kw</td>
+	<td>javascript{storedVars.phrase[storedVars.n]}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=su</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>javascript{storedVars.phrase[storedVars.n]+'_百度搜索'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>javascript{storedVars.phrase[storedVars.n]+'_百度搜索'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.nums</td>
+	<td>*百度为您找到相关结果*个</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${n} + 1</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

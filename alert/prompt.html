@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="file:///C:/wd/seIDE/alert/" />
+<title>弹窗自动化测试案例</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">弹窗自动化测试案例</td></tr>
+</thead><tbody>
+<!--打开被测页面-->
+<tr>
+	<td>open</td>
+	<td>sample.html</td>
+	<td></td>
+</tr>
+<!--弹出提示弹窗，输入文本 Selenium IDE，并验证-->
+<tr>
+	<td>answerOnNextPrompt</td>
+	<td>Selenium IDE</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnPrompt</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertPrompt</td>
+	<td>正在学习的这个 web 自动化测试工具是什么？</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=output</td>
+	<td>Selenium IDE</td>
+</tr>
+<!--弹出提示弹窗，直接取消弹窗，并验证-->
+<!--==注意：取消弹窗与输入空值，视为相同-->
+<tr>
+	<td>answerOnNextPrompt</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnPrompt</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertPrompt</td>
+	<td>正在学习的这个 web 自动化测试工具是什么？</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=output</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

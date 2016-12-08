@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://www.baidu.com/" />
+<title>baiducsv</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">baiducsv</td></tr>
+</thead><tbody>
+<!--这是一个数据驱动测试redmine网页登录的自动化脚本，数据文件类型为CSV-->
+<!--打开页面-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--定义变量-->
+<tr>
+	<td>readCSV</td>
+	<td>file:///C:/Users/pc/Documents/HBuilderProject/selenium/baidu.csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>row</td>
+</tr>
+<!--开始循环输入 ，查询-->
+<tr>
+	<td>while</td>
+	<td>${row}&lt;5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>text</td>
+	<td>${row},1</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${text}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=kw</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=kw</td>
+	<td>${text}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=su</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>${text}_百度搜索</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>${text}_百度搜索</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.nums</td>
+	<td>*百度为您找到相关结果*个</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${row}+1</td>
+	<td>row</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

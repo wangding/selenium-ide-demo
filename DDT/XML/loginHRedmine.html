@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.hostedredmine.com/" />
+<title>登录hostedredmine</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">登录hostedredmine</td></tr>
+</thead><tbody>
+<!--【注意：】-->
+<!--1. 确保按正确顺序加载三个 js 扩展，分别是：user-extensions.js, goto_sel_ide.js, datadriven.js-->
+<!--2. 确保数据文件 accountData.xml 的路径正确；-->
+<!------------------------------------- Let's go! ----------------------------------------->
+<!--【DDT: Data Drive Test 数据驱动测试，Hosted Redmine 登录测试案例】-->
+<!--加载测试数据-->
+<tr>
+	<td>loadTestData</td>
+	<td>file:///c:/wd/seIDE/DDT/loginHRedmineData.xml</td>
+	<td></td>
+</tr>
+<!--循环取出登录账号，进行登录测试-->
+<tr>
+	<td>while</td>
+	<td>!testdata.EOF()</td>
+	<td></td>
+</tr>
+<tr>
+	<td>nextTestData</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>${userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>${passWord}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>curURL</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['curURL'] == &quot;http://www.hostedredmine.com/login&quot;</td>
+	<td>LOGIN_FAIL</td>
+</tr>
+<!--LOGIN_PASS-->
+<tr>
+	<td>label</td>
+	<td>LOGIN_PASSS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${userName} , ${passWord} , &quot;LOGIN_PASS&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>我的工作台 - Online Project Management :: Free Redmine Hosting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>我的工作台 - Online Project Management :: Free Redmine Hosting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=loggedas</td>
+	<td>登录为 ${userName}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=退出</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>END</td>
+	<td></td>
+</tr>
+<!--LOGIN_FAIL-->
+<tr>
+	<td>label</td>
+	<td>LOGIN_FAIL</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${userName} , ${passWord} , &quot;LOGIN_FAIL&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=flash_error</td>
+	<td>Invalid user or password</td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>END</td>
+	<td></td>
+</tr>
+<!--END-->
+<tr>
+	<td>label</td>
+	<td>END</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

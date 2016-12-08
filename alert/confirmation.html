@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="file:///C:/wd/seIDE/alert/" />
+<title>弹窗自动化测试案例</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">弹窗自动化测试案例</td></tr>
+</thead><tbody>
+<!--打开被测页面-->
+<tr>
+	<td>open</td>
+	<td>sample.html</td>
+	<td></td>
+</tr>
+<!--弹出确认弹窗，点击取消按钮，并验证-->
+<tr>
+	<td>chooseCancelOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnConfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>通过这门课一定能学会 web 自动化测试！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=output</td>
+	<td>已经取消！</td>
+</tr>
+<!--弹出确认弹窗，点击确定按钮，并验证-->
+<tr>
+	<td>chooseOkOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnConfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>通过这门课一定能学会 web 自动化测试！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=output</td>
+	<td>已经确认。</td>
+</tr>
+<!--弹出确认弹窗，点击确定按钮，并验证-->
+<!--==注意：默认情况下 Selenium IDE 会触发 OK 按钮，所以 chooseOkOnNextConfirmation 命令可以省略-->
+<tr>
+	<td>click</td>
+	<td>id=btnConfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>通过这门课一定能学会 web 自动化测试！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=output</td>
+	<td>已经确认。</td>
+</tr>
+</tbody></table>
+</body>
+</html>

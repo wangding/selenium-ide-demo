@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.baidu.com" />
+<title>getInfo2</title>
+</head>
+<body>
+<!--
+	作者：408542507@qq.com
+	时间：2016-11-13
+	描述：这个自动化测试案例脚本用到流程控制，判断百度首页是否登录。
+	如果登录，则退出登录，再获取百度首页面的信息。如果没有登录，则
+	直接获取百度首页信息。
+-->
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">getInfo2</td></tr>
+</thead><tbody>
+<!--【echo 百度网站首页面上的信息】-->
+<!--变量初始化-->
+<tr>
+	<td>store</td>
+	<td>登录</td>
+	<td>wdLogin</td>
+</tr>
+<!--打开百度首页-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--获取首页文本，并判断是否包含登录链接-->
+<tr>
+	<td>storeBodyText</td>
+	<td>wdText</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars[&quot;wdText&quot;].match(&quot;登录&quot;)</td>
+	<td>wdExist</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${wdExist}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars[&quot;wdExist&quot;] == storedVars[&quot;wdLogin&quot;]</td>
+	<td>getInfo</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>已经登录了，先退出登录！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=head_wrapper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseMove</td>
+	<td>css=span.user-name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=退出</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>getInfo</td>
+	<td></td>
+</tr>
+<!--获取首页Title信息，然后echo打印-->
+<tr>
+	<td>echo</td>
+	<td>获取首页Title信息，然后echo打印</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeTitle</td>
+	<td>wdBaiduTitle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${wdBaiduTitle}</td>
+	<td></td>
+</tr>
+<!--获取首页面上的文字，然后echo打印-->
+<tr>
+	<td>echo</td>
+	<td>获取首页面上的文字，然后echo打印</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeBodyText</td>
+	<td>wdBaiduBody</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${wdBaiduBody}</td>
+	<td></td>
+</tr>
+<!--获取首页HTML代码，并打印-->
+<tr>
+	<td>echo</td>
+	<td>获取首页HTML代码，并打印</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>wdBaiduSource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${wdBaiduSource}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

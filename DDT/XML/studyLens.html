@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://edu.51cto.com/user/" />
+<title>DDT 学生学习时长测试案例</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DDT 学生学习时长测试案例</td></tr>
+</thead><tbody>
+<!--【注意：】-->
+<!--1. 确保按正确顺序加载三个 js 扩展，分别是：user-extensions.js, goto_sel_ide.js, datadriven.js-->
+<!--2. 确保数据文件 studentData.xml 的路径正确；-->
+<!------------------------------------- Let's go! ----------------------------------------->
+<!--【DDT: Data Drive Test 数据驱动测试，学习时长测试案例】-->
+<!--加载测试数据-->
+<tr>
+	<td>loadTestData</td>
+	<td>file:///e:/wd/seIDE/DDT/studyLensData.xml</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>totalLen</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>stdNum</td>
+</tr>
+<!--循环查询学习时长数据并求和-->
+<tr>
+	<td>while</td>
+	<td>!testdata.EOF()</td>
+	<td></td>
+</tr>
+<tr>
+	<td>nextTestData</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${userid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.red</td>
+	<td>len</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Number(storedVars['totalLen']) + Number(storedVars['len'])</td>
+	<td>totalLen</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Number(storedVars['stdNum']) + 1</td>
+	<td>stdNum</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${stdNum}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--打印输出结果-->
+<tr>
+	<td>echo</td>
+	<td>总学习时长：${totalLen}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{'平均学习时长' + storedVars['totalLen']/storedVars['stdNum']}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
