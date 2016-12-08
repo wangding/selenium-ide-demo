@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.atool.org/" />
+<title>mobilecsv</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">mobilecsv</td></tr>
+</thead><tbody>
+<!--这是一个用数据驱动对手机号码归属地查询网页的测试，数据文件类型为CSV-->
+<!--一、打开网页-->
+<tr>
+	<td>open</td>
+	<td>/phonenumber.php</td>
+	<td></td>
+</tr>
+<!--二、定义各个变量-->
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>row</td>
+</tr>
+<tr>
+	<td>readCSV</td>
+	<td>file:///D:/我的文档/HBuilderProject/selenium/DDT/mobile.csv</td>
+	<td></td>
+</tr>
+<!--三、循环输入数据验证-->
+<tr>
+	<td>while</td>
+	<td>${row}&lt;94</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>num</td>
+	<td>${row},1</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>res</td>
+	<td>${row},2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${res}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=q</td>
+	<td>${num}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.form_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>${res}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${row}+1</td>
+	<td>row</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://edu.51cto.com/user/" />
+<title>51ctocsv</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">51ctocsv</td></tr>
+</thead><tbody>
+<!--这是一个用数据驱动测试51CTO学习时长统计的脚本，数据文件类型为csv-->
+<!--一、定义各个变量-->
+<tr>
+	<td>readCSV</td>
+	<td>file:///D:/我的文档/HBuilderProject/selenium/DDT/51cto.csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>totalLen</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>row</td>
+</tr>
+<!--二、开始循环获取数据并计算-->
+<tr>
+	<td>while</td>
+	<td>${row}&lt;28</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>id</td>
+	<td>${row},1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${id}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.red</td>
+	<td>len</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Number(storedVars['totalLen']) + Number(storedVars['len'])</td>
+	<td>totalLen</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${row}+1</td>
+	<td>row</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--三、打印报表：总共学习时长和平均学习时长-->
+<tr>
+	<td>echo</td>
+	<td>总共学习时长：${totalLen}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{'平均学习时长：' + storedVars['totalLen']/27}</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
