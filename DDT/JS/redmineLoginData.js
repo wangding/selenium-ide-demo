@@ -1,0 +1,6 @@
+name1="test_2016_1"
+pass1="123"
+name2="test_2006_2"
+pass2="Passw0rd!"
+name3="test_2016_1"
+pass3="Passw0rd!"

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.hostedredmine.com/" />
+<title>redminejs</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">redminejs</td></tr>
+</thead><tbody>
+<!--这是一个对hostedredmine网站登录功能的自动化测试脚本，是数据驱动测试，用的是JS数据类型-->
+<!--一、打开hostedredmine网站首页-->
+<tr>
+	<td>open</td>
+	<td>/login</td>
+	<td></td>
+</tr>
+<!--二、定义各个变量-->
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>无效</td>
+	<td>er</td>
+</tr>
+<!--三、开始循环输入-->
+<tr>
+	<td>while</td>
+	<td>storedVars['er']=='无效'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>name${n}</td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>pass${n}</td>
+	<td>pass</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>${pass}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeBodyText</td>
+	<td>erro</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['erro'].match('无效')</td>
+	<td>er</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${er}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${n}+1</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--四、跳出循环，继续验证-->
+<tr>
+	<td>verifyTitle</td>
+	<td>Online Project Management :: Free Redmine Hosting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=loggedas</td>
+	<td>登录为 test_2016_1</td>
+</tr>
+<!--五、还原未登录状态-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=退出</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
