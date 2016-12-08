@@ -1,6 +1,13 @@
 # seIDE
 用 Selenium IDE 录制的各种网站的自动化测试脚本，用于教学或生产案例。
 
+<<<<<<< HEAD
+# 视频课程
+- [Selenium IDE WEB 自动化测试（上）](http://edu.51cto.com/course/course_id-7320.html)
+- [Selenium IDE WEB 自动化测试（中）](http://edu.51cto.com/course/course_id-7425.html)
+- [Selenium IDE WEB 自动化测试（下）](http://edu.51cto.com/course/course_id-7578.html)
+# 参与项目
+=======
 ## 视频课程
 - [Selenium IDE web 自动化测试（上）](http://edu.51cto.com/course/course_id-7320.html)
 - [Selenium IDE web 自动化测试（中）](http://edu.51cto.com/course/course_id-7425.html)
@@ -12,6 +19,7 @@
 - [Selenium IDE: Flow Control](https://addons.mozilla.org/zh-CN/firefox/addon/flow-control/)
 
 ## 参与项目
+>>>>>>> 7820f22c2e8503afb2f67d46f658d80e50952f61
 
 - 可以参与的工作如下：
   - 项目文档维护，主要是每个文件夹下面的 README.md 文件的信息更新和维护；
