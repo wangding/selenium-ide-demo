@@ -11,6 +11,7 @@
 <thead>
 <tr><td rowspan="1" colspan="3">baiduSchHTML</td></tr>
 </thead><tbody>
+<!--初始化循环变量和数组-->
 <tr>
 	<td>store</td>
 	<td>1</td>
@@ -21,6 +22,7 @@
 	<td>new Array(6)</td>
 	<td>phrase</td>
 </tr>
+<!--打开数据页面，循环装入测试数据-->
 <tr>
 	<td>open</td>
 	<td>/test/baiduSchData.html</td>
@@ -51,11 +53,7 @@
 	<td></td>
 	<td></td>
 </tr>
-<tr>
-	<td>echo</td>
-	<td>javascript{storedVars.phrase.length}</td>
-	<td></td>
-</tr>
+<!--执行测试数据-->
 <tr>
 	<td>store</td>
 	<td>1</td>
@@ -72,6 +70,41 @@
 	<td></td>
 </tr>
 <tr>
+	<td>open</td>
+	<td>http://www.baidu.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=kw</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=kw</td>
+	<td>javascript{storedVars.phrase[storedVars.n]}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=su</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>javascript{storedVars.phrase[storedVars.n]+'_百度搜索'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>javascript{storedVars.phrase[storedVars.n]+'_百度搜索'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.nums</td>
+	<td>*百度为您找到相关结果*个</td>
+</tr>
+<tr>
 	<td>storeEval</td>
 	<td>${n} + 1</td>
 	<td>n</td>
@@ -81,12 +114,6 @@
 	<td></td>
 	<td></td>
 </tr>
-<tr>
-	<td></td>
-	<td></td>
-	<td></td>
-</tr>
-
 </tbody></table>
 </body>
 </html>
