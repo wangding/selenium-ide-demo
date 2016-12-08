@@ -23,4 +23,4 @@ http://www.hostedredmine.com
 
 ## 自动化任务
 * 打开所有学生的个人信息页面  [profile.html](profile.html)
- 
+* 进入auto_test_demo项目并验证[enterPRJ.html](enterPRJ.html)

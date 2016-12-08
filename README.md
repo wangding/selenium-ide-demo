@@ -4,7 +4,7 @@
 # 视频课程
 - [Selenium IDE WEB 自动化测试（上）](http://edu.51cto.com/course/course_id-7320.html)
 - [Selenium IDE WEB 自动化测试（中）](http://edu.51cto.com/course/course_id-7425.html)
-
+- [Selenium IDE WEB 自动化测试（下）](http://edu.51cto.com/course/course_id-7578.html)
 # 参与项目
 
 - 可以参与的工作如下：
