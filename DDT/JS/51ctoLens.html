@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://edu.51cto.com/user/" />
+<title>51ctojs</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">51ctojs</td></tr>
+</thead><tbody>
+<!--这是一个统计51CTO学习时长的自动化脚本，用的是数据驱动测试，数据文件类型是JS类型-->
+<!--变量初始化-->
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>totalLen</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${totalLen}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>n</td>
+</tr>
+<!--循环获取时长，并累加-->
+<tr>
+	<td>while</td>
+	<td>${n} &lt;28</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>id${n}</td>
+	<td>id</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${id}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${id}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span.red</td>
+	<td>len</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Number(storedVars['totalLen']) + Number(storedVars['len'])</td>
+	<td>totalLen</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${n}+1</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--打印报表：总共学习时长和平均学习时长-->
+<tr>
+	<td>echo</td>
+	<td>总共学习时长：${totalLen}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{'平均学习时长：' + storedVars['totalLen']/27}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
