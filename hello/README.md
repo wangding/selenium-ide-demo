@@ -22,3 +22,7 @@ NULL
   
 - [loginRedmine](loginRedmine.html)  
   利用 [locatorData.js](locatorData.js) 将定位器都参数化了，保证将来定位器参数更改的时候，代码维护的工作量最小。
+- [branch](branch.html)
+   演示的分支判断测试案例
+- [loop](loop.html)
+  循环测试案例:循环打印n
