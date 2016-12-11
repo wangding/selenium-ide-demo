@@ -89,7 +89,7 @@ hosted redmine：http://www.hostedredmine.com/
 
 _测试案例及数据文件_
 
-- [loginHRedmine-csv.html](CSV/loginHRedmine-csv.html)  
+- [loginHRedmine-csv.html](CSV/loginHRedmine.html)  
   不同账户的用户名和密码，进行登录身份验证。
 - [accountData.csv](CSV/accountData.csv)  
   用户名和密码列表的数据文件。  
