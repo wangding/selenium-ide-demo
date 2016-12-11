@@ -12,7 +12,6 @@
 - [Selenium IDE: Flow Control](https://addons.mozilla.org/zh-CN/firefox/addon/flow-control/)
 
 ## 参与项目
-
 - 可以参与的工作如下：
   - 项目文档维护，主要是每个文件夹下面的 README.md 文件的信息更新和维护；
   - 对已有网站脚本的修改和完善，如果你觉得自动化测试脚本的测试功能点可以更多一些，或者有优化的地方；
