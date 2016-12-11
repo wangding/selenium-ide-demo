@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="https://wangding.github.io/" />
-<title>51ctoLens</title>
+<title>学生学习时长测试案例</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">51ctoLens</td></tr>
+<tr><td rowspan="1" colspan="3">学生学习时长测试案例</td></tr>
 </thead><tbody>
 <!--初始化循环变量和数组-->
 <tr>
@@ -22,12 +22,7 @@
 	<td>0</td>
 	<td>totalLen</td>
 </tr>
-<tr>
-	<td>storeEval</td>
-	<td>new Array(6)</td>
-	<td>phrase</td>
-</tr>
-<!--打开数据页面，循环装入测试数据-->
+<!--打开数据页面-->
 <tr>
 	<td>open</td>
 	<td>/Sample/Selenium/51ctoLensData.html</td>
@@ -38,6 +33,12 @@
 	<td>window.document.getElementsByTagName('tr').length</td>
 	<td>rows</td>
 </tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array(Number(storedVars['rows']))</td>
+	<td>phrase</td>
+</tr>
+<!--循环装入测试数据-->
 <tr>
 	<td>while</td>
 	<td>${n} &lt; ${rows}</td>
@@ -112,10 +113,9 @@
 </tr>
 <tr>
 	<td>echo</td>
-	<td>javascript{'平均学习时长：' + storedVars['totalLen']/27}</td>
+	<td>javascript{'平均学习时长：' + storedVars['totalLen']/storedVars['rows']}</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
