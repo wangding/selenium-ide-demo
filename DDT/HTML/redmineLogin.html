@@ -4,28 +4,18 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="https://wangding.github.io/" />
-<title>学生学习时长测试案例</title>
+<title>redmineLogin</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">学生学习时长测试案例</td></tr>
+<tr><td rowspan="1" colspan="3">redmineLogin</td></tr>
 </thead><tbody>
-<!--初始化循环变量和数组-->
-<tr>
-	<td>store</td>
-	<td>1</td>
-	<td>n</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>0</td>
-	<td>totalLen</td>
-</tr>
-<!--打开数据页面-->
+<!--这是一个对hostedredmine网站登录功能的自动化测试脚本，是数据驱动测试，用的是html数据类型-->
+<!--打开数据页面，初始化循环变量和数组-->
 <tr>
 	<td>open</td>
-	<td>/Sample/Selenium/51ctoLensData.html</td>
+	<td>/Sample/Selenium/redmineLoginData.html</td>
 	<td></td>
 </tr>
 <tr>
@@ -35,8 +25,18 @@
 </tr>
 <tr>
 	<td>storeEval</td>
-	<td>new Array(Number(storedVars['rows']))</td>
+	<td>new Array(storedVars.rows)</td>
 	<td>phrase</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>无效</td>
+	<td>er</td>
 </tr>
 <!--循环装入测试数据-->
 <tr>
@@ -64,7 +64,13 @@
 	<td></td>
 	<td></td>
 </tr>
-<!--执行测试数据-->
+<!--一、打开hostedredmine网站首页-->
+<tr>
+	<td>open</td>
+	<td>http://www.hostedredmine.com/login</td>
+	<td></td>
+</tr>
+<!--三、开始循环执行测试-->
 <tr>
 	<td>store</td>
 	<td>1</td>
@@ -72,32 +78,47 @@
 </tr>
 <tr>
 	<td>while</td>
-	<td>${n} &lt; ${rows}</td>
+	<td>storedVars['er']=='无效'</td>
 	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${n}+1</td>
+	<td>m</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>javascript{storedVars.phrase[storedVars.n]}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>javascript{storedVars.phrase[storedVars.m]}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeBodyText</td>
+	<td>erro</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['erro'].match('无效')</td>
+	<td>er</td>
 </tr>
 <tr>
 	<td>echo</td>
-	<td>javascript{storedVars.phrase[storedVars.n]}</td>
+	<td>${er}</td>
 	<td></td>
 </tr>
 <tr>
-	<td>open</td>
-	<td>javascript{storedVars.phrase[storedVars.n]}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>css=span.red</td>
-	<td>len</td>
-</tr>
-<tr>
 	<td>storeEval</td>
-	<td>Number(storedVars['totalLen']) + Number(storedVars['len'])</td>
-	<td>totalLen</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>${n} + 1</td>
+	<td>${n}+2</td>
 	<td>n</td>
 </tr>
 <tr>
@@ -105,17 +126,24 @@
 	<td></td>
 	<td></td>
 </tr>
-<!--打印报表：总共学习时长和平均学习时长-->
+<!--四、跳出循环，继续验证-->
 <tr>
-	<td>echo</td>
-	<td>总共学习时长：${totalLen}</td>
+	<td>verifyTitle</td>
+	<td>我的工作台 - Online Project Management :: Free Redmine Hosting</td>
 	<td></td>
 </tr>
 <tr>
-	<td>echo</td>
-	<td>javascript{'平均学习时长：' + storedVars['totalLen']/storedVars['rows']}</td>
+	<td>verifyText</td>
+	<td>id=loggedas</td>
+	<td>登录为 test_2016_1</td>
+</tr>
+<!--五、还原未登录状态-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=退出</td>
 	<td></td>
 </tr>
+
 </tbody></table>
 </body>
 </html>
