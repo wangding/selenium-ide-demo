@@ -91,7 +91,7 @@ _测试案例及数据文件_
 
 - [loginHRedmine-csv.html](CSV/loginHRedmine.html)  
   不同账户的用户名和密码，进行登录身份验证。
-- [accountData.csv](CSV/accountData.csv)  
+- [loginHRedmineData.csv](CSV/loginHRedmineData.csv)  
   用户名和密码列表的数据文件。  
   
 ### 被测网站：51CTO学院
@@ -162,7 +162,7 @@ _测试案例及数据文件_
 
 - [baiduSearch.html](XML/baiduSearch.html)  
   打开百度首页，搜索若干关键字
-- [baiduSchData.xml](XML/baiduSchData.xml)  
+- [baiduSearchData.xml](XML/baiduSearchData.xml)  
   本 XML 格式的数据文件包含了需要在百度上检索的关键字列表
 
 ### 被测网站：51CTO 学院
@@ -173,7 +173,7 @@ _测试案例及数据文件_
 
 - [studyLens.html](XML/studyLens.html)  
   统计学生学习总时长和平均时长
-- [studentData.xml](XML/studentData.xml)   
+- [studyLensData.xml](XML/studyLensData.xml)   
   本 XML 格式的数据文件包含了学生学习记录的 URL 地址列表 
 
 ### 被测网站：hosted redmine
@@ -184,7 +184,7 @@ _测试案例及数据文件_
 
 - [loginHRedmine.html](XML/loginHRedmine.html)  
   用不同账户的用户名和密码，进行登录身份验证。  
-- [accountData.xml](XML/accountData.xml)  
+- [loginHRedmineData.xml](XML/loginHRedmineData.xml)  
   用户名和密码的列表。
 
 ### 被测网站：手机号码归属地查询
