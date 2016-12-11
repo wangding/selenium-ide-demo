@@ -30,9 +30,9 @@ varname = "value"
 
 _测试案例及数据文件_
 
-- [baiduSch-JS.html](baiduSch-JS.html)  
+- [baiduSearch.html](DDT/JS/baiduSearch.html)  
   循环读取 JS 数据文件中的数据，打开百度首页，搜索相应的关键字
-- [dataSource.js](dataSource.js)  
+- [baiduSearchData.js](DDT/JS/baiduSearchData.js)  
   本 .js 格式的数据文件包含了需要在百度上检索的关键字列表
   
 ### 被测网站：51CTO学院
@@ -41,9 +41,9 @@ _测试案例及数据文件_
 
 _测试案例及数据文件_
 
-- [51ctoLens.html](51ctoLens.html)  
+- [51ctoLens.html](DDT/JS/51ctoLens.html)  
   循环读取 JS 数据文件中的数据，打开所有学生的51CTO学院页面，统计总共学习时长和平均学习时长并打印
-- [51ctoLensData.js](51ctoLensData.js)  
+- [51ctoLensData.js](DDT/JS/51ctoLensData.js)  
   本 .js 格式的数据文件包含了所有学生51CTO学院页面列表
   
 ### 被测网站：手机号码归属地查询
@@ -52,9 +52,9 @@ _测试案例及数据文件_
 
 _测试案例及数据文件_
 
-- [mobile.html](mobile.html)  
+- [mobile.html](DDT/JS/mobile.html)  
   循环读取 JS 数据文件中的数据，打开手机号码归属地查询网页，对各类手机号码进行查询并验证
-- [mobileData.js](mobileData.js)  
+- [mobileData.js](DDT/JS/mobileData.js)  
   本 .js 格式的数据文件包含了各类手机号码及其归属地和运营商列表
   
 ### 被测网站：hosted redmine
@@ -63,9 +63,9 @@ hosted redmine:http://www.hostedredmine.com
 
 _测试案例及数据文件_
 
-- [redmineLogin.html](redmineLogin.html)  
+- [redmineLogin.html](DDT/JS/redmineLogin.html)  
   循环读取 JS 数据文件中的数据，对hostedredmine网站登录功能的自动化测试
-- [redmineLoginData.js](redmineLoginData.js)  
+- [redmineLoginData.js](DDT/JS/redmineLoginData.js)  
   本 .js 格式的数据文件包含了登录hostedredmine网站可能出现的三种情况列表
   
 ## DDT 方案二：CSV 数据文件 
@@ -89,9 +89,9 @@ hosted redmine：http://www.hostedredmine.com/
 
 _测试案例及数据文件_
 
-- [loginHRedmine-csv.html](loginHRedmine-csv.html)  
+- [loginHRedmine-csv.html](CSV/loginHRedmine-csv.html)  
   不同账户的用户名和密码，进行登录身份验证。
-- [accountData.csv](accountData.csv)  
+- [accountData.csv](CSV/accountData.csv)  
   用户名和密码列表的数据文件。  
   
 ### 被测网站：51CTO学院
@@ -100,9 +100,9 @@ _测试案例及数据文件_
 
 _测试案例及数据文件_
 
-- [51ctoLens.html](51ctoLens.html)  
+- [51ctoLens.html](CSV/51ctoLens.html)  
   打开所有学生的51CTO网站学习页面
-- [51ctoLensData.csv](51ctoLensData.csv)  
+- [51ctoLensData.csv](CSV/51ctoLensData.csv)  
   所有学生51CTO网站学生学习页面网页列表的数据文件。  
   
 ### 被测网站：手机号码归属地查询
@@ -111,9 +111,9 @@ _测试案例及数据文件_
 
 _测试案例及数据文件_
 
-- [mobile.html](mobile.html)  
+- [mobile.html](CSV/mobile.html)  
   打开手机号码归属地查询网页，对各类手机号码进行查询并验证
-- [mobileData.csv](mobileData.csv)  
+- [mobileData.csv](CSV/mobileData.csv)  
   各类手机号码及其归属地和运营商列表
   
 ### 被测网站：百度
@@ -122,9 +122,9 @@ _测试案例及数据文件_
 
 _测试案例及数据文件_
 
-- [baiduSearch.html](baiduSearch.html)  
+- [baiduSearch.html](CSV/baiduSearch.html)  
   打开百度首页，搜索相应的关键字
-- [baiduSearchData.csv](baiduSearchData.csv)  
+- [baiduSearchData.csv](CSV/baiduSearchData.csv)  
   需要在百度上检索的关键字列表
   
 ## DDT 方案三：XML 数据文件
@@ -160,9 +160,9 @@ XML 数据文件格式如下所示：
 
 _测试案例及数据文件_
 
-- [baiduSearch.html](baiduSearch.html)  
+- [baiduSearch.html](XML/baiduSearch.html)  
   打开百度首页，搜索若干关键字
-- [baiduSchData.xml](baiduSchData.xml)  
+- [baiduSchData.xml](XML/baiduSchData.xml)  
   本 XML 格式的数据文件包含了需要在百度上检索的关键字列表
 
 ### 被测网站：51CTO 学院
@@ -171,9 +171,9 @@ _测试案例及数据文件_
 
 _测试案例及数据文件_
 
-- [studyLens.html](studyLens.html)  
+- [studyLens.html](XML/studyLens.html)  
   统计学生学习总时长和平均时长
-- [studentData.xml](studentData.xml)   
+- [studentData.xml](XML/studentData.xml)   
   本 XML 格式的数据文件包含了学生学习记录的 URL 地址列表 
 
 ### 被测网站：hosted redmine
@@ -182,9 +182,9 @@ hosted redmine：http://www.hostedredmine.com/
 
 _测试案例及数据文件_
 
-- [loginHRedmine.html](loginHRedmine.html)  
+- [loginHRedmine.html](XML/loginHRedmine.html)  
   用不同账户的用户名和密码，进行登录身份验证。  
-- [accountData.xml](accountData.xml)  
+- [accountData.xml](XML/accountData.xml)  
   用户名和密码的列表。
 
 ### 被测网站：手机号码归属地查询
@@ -193,9 +193,9 @@ _测试案例及数据文件_
 
 _测试案例及数据文件_
 
-- [mobile.html](mobile.html)  
+- [mobile.html](XML/mobile.html)  
   打开手机号码归属地查询网页，对各类手机号码进行查询并验证
-- [mobileData.xml](mobileData.xml)  
+- [mobileData.xml](XML/mobileData.xml)  
   各类手机号码及其归属地和运营商列表
   
 ## DDT 方案四：JSON 数据文件
