@@ -13,6 +13,16 @@
 </thead><tbody>
 <!--打开新建文件页面-->
 <tr>
+	<td>store</td>
+	<td>1</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${n} &lt; 6</td>
+	<td></td>
+</tr>
+<tr>
 	<td>open</td>
 	<td>new</td>
 	<td></td>
@@ -31,7 +41,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[2]/div[2]</td>
+	<td>//div[2]/div[${n}]</td>
 	<td></td>
 </tr>
 <!--输入文件名-->
@@ -88,7 +98,16 @@
 	<td>${fileName}</td>
 	<td></td>
 </tr>
-<!---->
+<tr>
+	<td>storeEval</td>
+	<td>${n} + 1</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
