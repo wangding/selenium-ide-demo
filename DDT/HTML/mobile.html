@@ -4,18 +4,18 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="https://wangding.github.io/" />
-<title>登录hostedredmine</title>
+<title>手机号码归属地查询网站测试脚本</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">登录hostedredmine</td></tr>
+<tr><td rowspan="1" colspan="3">手机号码归属地查询网站测试脚本</td></tr>
 </thead><tbody>
-<!--这是一个对hostedredmine网站登录功能的自动化测试脚本，是数据驱动测试，用的是html数据类型-->
+<!--这是一个使用数据驱动测试手机归属地查询网页的自动化脚本,数据文件类型是html-->
 <!--一、打开数据页面，初始化循环变量和数组-->
 <tr>
 	<td>open</td>
-	<td>/Sample/Selenium/redmineLoginData.html</td>
+	<td>/Sample/Selenium/mobileData.html</td>
 	<td></td>
 </tr>
 <tr>
@@ -26,22 +26,17 @@
 <tr>
 	<td>storeEval</td>
 	<td>new Array(storedVars.rows)</td>
-	<td>user</td>
+	<td>num</td>
 </tr>
 <tr>
 	<td>storeEval</td>
 	<td>new Array(storedVars.rows)</td>
-	<td>pass</td>
+	<td>res</td>
 </tr>
 <tr>
 	<td>store</td>
 	<td>1</td>
 	<td>n</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>无效</td>
-	<td>er</td>
 </tr>
 <!--二、循环装入测试数据-->
 <tr>
@@ -52,21 +47,21 @@
 <tr>
 	<td>storeText</td>
 	<td>//tr[${n}]/td[1]</td>
-	<td>us</td>
+	<td>number</td>
 </tr>
 <tr>
 	<td>storeText</td>
 	<td>//tr[${n}]/td[2]</td>
-	<td>pa</td>
+	<td>result</td>
 </tr>
 <tr>
 	<td>runScript</td>
-	<td>javascript{storedVars.user[storedVars.n] = storedVars.us}</td>
+	<td>javascript{storedVars.num[storedVars.n] = storedVars.number}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>runScript</td>
-	<td>javascript{storedVars.pass[storedVars.n] = storedVars.pa}</td>
+	<td>javascript{storedVars.res[storedVars.n] = storedVars.result}</td>
 	<td></td>
 </tr>
 <tr>
@@ -79,10 +74,10 @@
 	<td></td>
 	<td></td>
 </tr>
-<!--三、开始循环执行测试-->
+<!--三、打开手机归属地查询工具网页-->
 <tr>
 	<td>open</td>
-	<td>http://www.hostedredmine.com/login</td>
+	<td>http://www.atool.org/phonenumber.php</td>
 	<td></td>
 </tr>
 <tr>
@@ -90,35 +85,26 @@
 	<td>1</td>
 	<td>n</td>
 </tr>
+<!--四、循环查询各手机号的归属地-->
 <tr>
 	<td>while</td>
-	<td>storedVars['er']=='无效'</td>
+	<td>${n}&lt;=${rows}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=username</td>
-	<td>javascript{storedVars.user[storedVars.n]}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=password</td>
-	<td>javascript{storedVars.pass[storedVars.n]}</td>
+	<td>name=q</td>
+	<td>javascript{storedVars.num[storedVars.n]}</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>name=login</td>
+	<td>css=input.form_button</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeBodyText</td>
-	<td>erro</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>storedVars['erro'].match('无效')</td>
-	<td>er</td>
+	<td>verifyText</td>
+	<td>css=pre</td>
+	<td>javascript{storedVars.res[storedVars.n]}</td>
 </tr>
 <tr>
 	<td>storeEval</td>
@@ -128,23 +114,6 @@
 <tr>
 	<td>endWhile</td>
 	<td></td>
-	<td></td>
-</tr>
-<!--四、跳出循环，继续验证-->
-<tr>
-	<td>verifyTitle</td>
-	<td>我的工作台 - Online Project Management :: Free Redmine Hosting</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>id=loggedas</td>
-	<td>登录为 test_2016_1</td>
-</tr>
-<!--五、还原未登录状态-->
-<tr>
-	<td>clickAndWait</td>
-	<td>link=退出</td>
 	<td></td>
 </tr>
 </tbody></table>
