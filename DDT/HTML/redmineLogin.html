@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="https://wangding.github.io/" />
+<link rel="selenium.base" href="https://liujinmenghaoren.github.io/" />
 <title>redmineLogin</title>
 </head>
 <body>
@@ -26,7 +26,12 @@
 <tr>
 	<td>storeEval</td>
 	<td>new Array(storedVars.rows)</td>
-	<td>phrase</td>
+	<td>user</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array(storedVars.rows)</td>
+	<td>pass</td>
 </tr>
 <tr>
 	<td>store</td>
@@ -46,12 +51,22 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//tr[${n}]/td</td>
-	<td>ph</td>
+	<td>//tr[${n}]/td[1]</td>
+	<td>us</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//tr[${n}]/td[2]</td>
+	<td>pa</td>
 </tr>
 <tr>
 	<td>runScript</td>
-	<td>javascript{storedVars.phrase[storedVars.n] = storedVars.ph}</td>
+	<td>javascript{storedVars.user[storedVars.n] = storedVars.us}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{storedVars.pass[storedVars.n] = storedVars.pa}</td>
 	<td></td>
 </tr>
 <tr>
@@ -89,12 +104,12 @@
 <tr>
 	<td>type</td>
 	<td>id=username</td>
-	<td>javascript{storedVars.phrase[storedVars.n]}</td>
+	<td>javascript{storedVars.user[storedVars.n]}</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=password</td>
-	<td>javascript{storedVars.phrase[storedVars.m]}</td>
+	<td>javascript{storedVars.pass[storedVars.n]}</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -143,7 +158,6 @@
 	<td>link=退出</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
