@@ -41,9 +41,14 @@
 	<td></td>
 </tr>
 <tr>
+	<td>storeEval</td>
+	<td>'flowChart' + Math.round(Math.random()*1000)</td>
+	<td>fileName</td>
+</tr>
+<tr>
 	<td>type</td>
 	<td>id=chart_title</td>
-	<td>flowChart</td>
+	<td>${fileName}</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -53,7 +58,7 @@
 <!--进入图形编辑页面-->
 <tr>
 	<td>assertTitle</td>
-	<td>flowChart - ProcessOn</td>
+	<td>${fileName} - ProcessOn</td>
 	<td></td>
 </tr>
 <tr>
@@ -74,9 +79,14 @@
 </tr>
 <!--验证文件存在-->
 <tr>
-	<td>verifyText</td>
-	<td>link=flowchart</td>
-	<td>flowChart</td>
+	<td>waitForText</td>
+	<td>css=div.title</td>
+	<td>标题</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${fileName}</td>
+	<td></td>
 </tr>
 <!---->
 </tbody></table>
