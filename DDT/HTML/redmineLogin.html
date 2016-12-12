@@ -4,15 +4,15 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="https://liujinmenghaoren.github.io/" />
-<title>redmineLogin</title>
+<title>登录hostedredmine</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">redmineLogin</td></tr>
+<tr><td rowspan="1" colspan="3">登录hostedredmine</td></tr>
 </thead><tbody>
 <!--这是一个对hostedredmine网站登录功能的自动化测试脚本，是数据驱动测试，用的是html数据类型-->
-<!--打开数据页面，初始化循环变量和数组-->
+<!--一、打开数据页面，初始化循环变量和数组-->
 <tr>
 	<td>open</td>
 	<td>/Sample/Selenium/redmineLoginData.html</td>
@@ -43,7 +43,7 @@
 	<td>无效</td>
 	<td>er</td>
 </tr>
-<!--循环装入测试数据-->
+<!--二、循环装入测试数据-->
 <tr>
 	<td>while</td>
 	<td>${n} &lt;= ${rows}</td>
@@ -79,13 +79,12 @@
 	<td></td>
 	<td></td>
 </tr>
-<!--一、打开hostedredmine网站首页-->
+<!--三、开始循环执行测试-->
 <tr>
 	<td>open</td>
 	<td>http://www.hostedredmine.com/login</td>
 	<td></td>
 </tr>
-<!--三、开始循环执行测试-->
 <tr>
 	<td>store</td>
 	<td>1</td>
