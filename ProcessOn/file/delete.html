@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.processon.com/" />
+<title>ProcessOn 删除文件和文件夹操作的测试案例</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ProcessOn 删除文件和文件夹操作的测试案例</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/diagrams#</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[3]/ul/li[1]/div</td>
+	<td>标题</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/ul/li[2]/div</td>
+	<td>fileExist</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${fileExist}</td>
+	<td></td>
+</tr>
+<!--问题：click 不能选中这一行，就不能进行删除操作-->
+<!--XPath 没有问题，用 XPath Checker 检查了没有问题-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/ul/li[2]</td>
+	<td></td>
+</tr>
+<!--
+<tr>
+	<td>waitForText</td>
+	<td>css=span#file-del</td>
+	<td>删除</td>
+</tr>
+-->
+<tr>
+	<td>click</td>
+	<td>id=file-del</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='global_confirm_window']/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[3]/ul/li[1]/div</td>
+	<td>标题</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/ul/li[2]/div</td>
+	<td>fileExist</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
