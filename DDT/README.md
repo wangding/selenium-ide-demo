@@ -197,8 +197,48 @@ _测试案例及数据文件_
   打开手机号码归属地查询网页，对各类手机号码进行查询并验证
 - [mobileData.xml](XML/mobileData.xml)  
   各类手机号码及其归属地和运营商列表
+ 
+## DDT 方案四：HTML 数据文件
+
+---
+
+### 被测网站：百度
+
+百度：http://www.baidu.com
+
+_测试案例_
+
+- [baiduSearch.html](HTML/baiduSearch.html)  
+   打开百度首页，搜索相应的关键字
+   
+### 被测网站：51CTO学院
+
+51CTO学院：http://edu.51cto.com
+
+_测试案例_
+
+- [51ctoLens.html](HTML/51ctoLens.html)  
+  打开所有学生的51CTO学院页面，统计总共学习时长和平均学习时长并打印
+ 
+### 被测网站：手机号码归属地查询
+
+手机号码归属地查询：http://www.atool.org
+
+_测试案例_
+
+- [mobile.html](HTML/mobile.html)  
+  打开手机号码归属地查询网页，对各类手机号码进行查询并验证  
   
-## DDT 方案四：JSON 数据文件
+### 被测网站：hosted redmine
+
+hosted redmine:http://www.hostedredmine.com
+
+_测试案例_
+
+- [redmineLogin.html](HTML/redmineLogin.html)  
+  对hostedredmine网站登录功能的自动化测试
+  
+## DDT 方案五：JSON 数据文件
 
 ---
 【暂时没找到资料】
