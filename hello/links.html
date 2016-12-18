@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.atool.org/" />
+<title>links</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">links</td></tr>
+</thead><tbody>
+<!--【网页链接检查】-->
+<!--变量初始化-->
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>window.document.getElementsByTagName('a')</td>
+	<td>links</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{'【网页中的链接总量】：' + storedVars.links.length}</td>
+	<td></td>
+</tr>
+<!--逐一打印每个链接 URL-->
+<tr>
+	<td>while</td>
+	<td>javascript{storedVars.n &lt; storedVars.links.length}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{'【LNK ' + storedVars.n + '】：' + storedVars.links[storedVars.n].href}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${n} + 1</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
