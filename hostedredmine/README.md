@@ -5,6 +5,7 @@ http://www.hostedredmine.com
 
 ## 测试环境
 测试账号：test_2016_1<br />
+测试密码：Passw0rd!<br />
 测试项目：auto_test_demo
 
 ## 测试案例
@@ -22,5 +23,7 @@ http://www.hostedredmine.com
 
 
 ## 自动化任务
-* 打开所有学生的个人信息页面  [profile.html](profile.html)
-* 进入auto_test_demo项目并验证[enterPRJ.html](enterPRJ.html)
+*  [profile.html](profile.html)  
+  打开所有学生的个人信息页面   
+* [enterPRJ.html](enterPRJ.html)  
+  进入auto_test_demo项目并验证  
