@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.processon.com" />
+<title>move1.html</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">move1.html</td></tr>
+</thead><tbody>
+<!--打开 Processon 首页-->
+<tr>
+	<td>open</td>
+	<td>/diagrams#</td>
+	<td></td>
+</tr>
+<!--判断列表第一项是否是文件夹-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/ul/li[2]</td>
+	<td>isExist</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${isExist} == false</td>
+	<td>NOTHING</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//li[2]/div[3]</td>
+	<td>modified</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>javascript{storedVars.modified != ''}</td>
+	<td>NOFOLDER</td>
+</tr>
+<!--循环判断列表第一项之后是否存在文件-->
+<tr>
+	<td>store</td>
+	<td>3</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/ul/li[${n}]</td>
+	<td>isExist</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${isExist} == false</td>
+	<td>NOFILE</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//li[${n}]/div[3]</td>
+	<td>modified</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>javascript{storedVars.modified != ''}</td>
+	<td>FILE_EXIST</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${n} + 1</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--LABEL: NOTHING，文件和文件夹都没有，先创建文件和文件夹，再进行移动操作-->
+<tr>
+	<td>label</td>
+	<td>NOTHING</td>
+	<td></td>
+</tr>
+<!--＞创建文件夹，名称用默认的-->
+<tr>
+	<td>click</td>
+	<td>//span[@onclick=&quot;DM.showTitleEdit('new')&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn_submit_folder</td>
+	<td></td>
+</tr>
+<!--＞创建文件，文件名用-->
+<tr>
+	<td>open</td>
+	<td>http://www.processon.com/diagrams/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=BPMN</td>
+	<td></td>
+</tr>
+<!--＞＞选择模板-->
+<tr>
+	<td>waitForText</td>
+	<td>//div[2]/div[1]</td>
+	<td>空模板</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/div[1]</td>
+	<td></td>
+</tr>
+<!--＞＞输入文件名-->
+<tr>
+	<td>click</td>
+	<td>id=chart_title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=chart_title</td>
+	<td>demo</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=template_select_ok</td>
+	<td></td>
+</tr>
+<!--＞＞进入图形编辑页面-->
+<tr>
+	<td>assertTitle</td>
+	<td>demo - ProcessOn</td>
+	<td></td>
+</tr>
+<!--＞＞返回文件列表-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=span.ico.ico_goback</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>ProcessOn - 我的文件</td>
+	<td></td>
+</tr>
+<!--＞＞验证文件存在-->
+<tr>
+	<td>waitForText</td>
+	<td>css=div.title</td>
+	<td>标题</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>demo</td>
+	<td></td>
+</tr>
+<!--＞准备开始移动文件-->
+<tr>
+	<td>store</td>
+	<td>3</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>FILE_EXIST</td>
+	<td></td>
+</tr>
+<!--LABEL: NOFOLDER，没有文件夹，先创建文件夹，再进行移动操作-->
+<tr>
+	<td>label</td>
+	<td>NOFILDER</td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<!--LABEL: FILE_EXIST，文件和文件夹都存在，直接进行移动操作-->
+<tr>
+	<td>label</td>
+	<td>FILE_EXIST</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/ul/li[${n}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=file-more</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=menu_mc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.dlg_content &gt; span.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//li/ul/li[1]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//li/ul/li[1]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>//li/ul/li[1]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn_submit_move</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.dir &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>新建文件</td>
+	<td></td>
+</tr>
+<!--判断是否文件夹和文件都没有-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>//ul/li[2]/div[1]/a</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array(100)</td>
+	<td>shuzu</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{storedVars.shuzu=String(storedVars.a)}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.shuzu[0]}</td>
+	<td>l</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['l']!='f'</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@onclick=&quot;DM.showTitleEdit('new')&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=folder_new_title</td>
+	<td>DEMO</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn_submit_folder</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.dir &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>标题</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>0</td>
+	<td></td>
+</tr>
+<!--判断第一个是否为文件夹-->
+<tr>
+	<td>storeText</td>
+	<td>//li[2]/div[3]</td>
+	<td>l</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['l']==''</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@onclick=&quot;DM.showTitleEdit('new')&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=folder_new_title</td>
+	<td>DEMO</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn_submit_folder</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.dir &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>标题</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>1</td>
+	<td></td>
+</tr>
+<!--循环判断有几个文件夹，并在内加入两个跳转-->
+<tr>
+	<td>store</td>
+	<td>3</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${a}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//li[${a}]/div[1]/a</td>
+	<td>i</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${i}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array(100)</td>
+	<td>shuzu</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{storedVars.shuzu=String(storedVars.i)}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.shuzu[0]}</td>
+	<td>l</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['l']=='f'</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//li[${a}]/div[3]</td>
+	<td>m</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['m']!=''</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${a}+1</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>2</td>
+	<td></td>
+</tr>
+<!--新建文件-->
+<tr>
+	<td>click</td>
+	<td>css=span.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td></td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>title=新建文件 - ProcessOn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=chart_title</td>
+	<td>demo</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=template_select_ok</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=span.ico.ico_goback</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>ProcessOn - 我的文件</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>标题</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>3</td>
+	<td></td>
+</tr>
+<!--文件移动-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/ul/li[${a}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=file-more</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=menu_mc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.dlg_content &gt; span.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li/ul/li[1]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn_submit_move</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
