@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.processon.com/" />
+<title>yidong</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">yidong</td></tr>
+</thead><tbody>
+<!--登录脑图-->
+<tr>
+	<td>open</td>
+	<td>/tour</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>ProcessOn - 免费在线作图，实时协作</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=登录</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>登录 | ProcessOn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=login_email</td>
+	<td>wangding@chmiot.net</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=login_password</td>
+	<td>Passw0rd!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=signin_btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>ProcessOn - 我的文件</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.dir &gt; a</td>
+	<td>我的文件</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.dir &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>标题</td>
+	<td></td>
+</tr>
+<!--循环-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/ul/li[3]</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${a}</td>
+	<td></td>
+</tr>
+<!--获取文件名首字符放入l变量-->
+<tr>
+	<td>storeText</td>
+	<td>//li[3]/div[1]/a</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array(100)</td>
+	<td>shuzu</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{storedVars.shuzu=storedVars.x}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.shuzu[0]}</td>
+	<td>l</td>
+</tr>
+<!--进行文件移动操作-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/ul/li[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=file-more</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=menu_mc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.dlg_content &gt; span.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>1开头</td>
+	<td></td>
+</tr>
+<!--判断文件移动位置-->
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['l']==1||storedVars['l']==2||storedVars['l']==3||storedVars['l']==4||storedVars['l']==5||storedVars['l']==6||storedVars['l']==7||storedVars['l']==8||storedVars['l']==9</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li/ul/li[10]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn_submit_move</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>T</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li/ul/li[${l}]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn_submit_move</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>T</td>
+	<td></td>
+</tr>
+<!--点击我的文件刷新并等待3秒，然后进行下一次循环-->
+<tr>
+	<td>label</td>
+	<td>T</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.dir &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>标题</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/ul/li[3]</td>
+	<td>a</td>
+</tr>
+<!--结束循环-->
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
