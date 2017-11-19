@@ -1,17 +1,35 @@
 # seIDE
+
 用 Selenium IDE 录制的各种网站的自动化测试脚本，用于教学或生产案例。
 
 ## 视频课程
-- [Selenium IDE web 自动化测试（上）](http://edu.51cto.com/course/course_id-7320.html)
-- [Selenium IDE web 自动化测试（中）](http://edu.51cto.com/course/course_id-7425.html)
-- [Selenium IDE web 自动化测试（下）](http://edu.51cto.com/course/course_id-7578.html)
+
+- [Selenium IDE web 自动化测试（上）](https://ke.qq.com/course/232231)
+- [Selenium IDE web 自动化测试（中）](https://ke.qq.com/course/232657)
+- [Selenium IDE web 自动化测试（下）](https://ke.qq.com/course/232711)
 
 ## 工具下载
 
 - [Selenium IDE](https://addons.mozilla.org/zh-CN/firefox/addon/selenium-ide/)
 - [Selenium IDE: Flow Control](https://addons.mozilla.org/zh-CN/firefox/addon/flow-control/)
 
+## 代码清单
+
+- [hello world](hello)  
+- [百度搜索](baidu/) 
+- [51CTO 学院](edu51cto/)  
+- [hostedredmine](hostedredmine/)  
+- [定位器](locator/)  
+- [913abc](913abc/)  
+- [atool](ATOOL/)  
+- [弹窗](alert/)  
+- [时间校准网](time/)  
+- [在线计算器](zxjsq/)  
+- [ProcessOn](ProcessOn/)  
+- [数据驱动测试](DDT/)  
+
 ## 参与项目
+
 - 可以参与的工作如下：
   - 项目文档维护，主要是每个文件夹下面的 README.md 文件的信息更新和维护；
   - 对已有网站脚本的修改和完善，如果你觉得自动化测试脚本的测试功能点可以更多一些，或者有优化的地方；
