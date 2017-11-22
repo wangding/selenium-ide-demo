@@ -1,15 +1,17 @@
 # seIDE
 
-用 Selenium IDE 录制的各种网站的自动化测试脚本，用于教学或生产案例。
+用 Selenium IDE 录制的各种网站的自动化测试脚本，用于教学或生产案例。附：[课程学习资料](https://github.com/wangding/courses/blob/master/seleniumIDE/README.md)  
 
 ## 视频课程
 
-- [Selenium IDE web 自动化测试（上）](https://ke.qq.com/course/232231)
-- [Selenium IDE web 自动化测试（中）](https://ke.qq.com/course/232657)
-- [Selenium IDE web 自动化测试（下）](https://ke.qq.com/course/232711)
+- [Selenium IDE web 自动化测试（上）](https://ke.qq.com/course/232231)  
+- [Selenium IDE web 自动化测试（中）](https://ke.qq.com/course/232657)  
+- [Selenium IDE web 自动化测试（下）](https://ke.qq.com/course/232711)  
+- [Selenium IDE 综合案例实战第一季](https://ke.qq.com/course/233031)  
 
 ## 工具下载
 
+- [火狐浏览器](http://ftp.mozilla.org/pub/firefox/releases/)  
 - [Selenium IDE](https://addons.mozilla.org/zh-CN/firefox/addon/selenium-ide/)
 - [Selenium IDE: Flow Control](https://addons.mozilla.org/zh-CN/firefox/addon/flow-control/)
 
@@ -27,6 +29,10 @@
 - [在线计算器](zxjsq/)  
 - [ProcessOn](ProcessOn/)  
 - [数据驱动测试](DDT/)  
+
+## 技术交流群
+
+![王顶，node.js, github, selenium IDE, 408542507@qq.com](student-group.jpg)  
 
 ## 参与项目
 
