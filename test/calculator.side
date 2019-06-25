@@ -1,0 +1,77 @@
+{
+  "id": "5b9e3c9f-0460-49b9-8dfe-8aaba67c8679",
+  "version": "2.0",
+  "name": "calculator",
+  "url": "http://www.zxjsq.net/",
+  "tests": [{
+    "id": "7d2ec2aa-63ca-409e-8c1e-8302dc3d1d9a",
+    "name": "add",
+    "commands": [{
+      "id": "871fd4d9-c8c5-4594-a68e-0c5bc335bc51",
+      "comment": "打开在线计算器网站并验证",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f32cd1d0-1d2f-47c7-9f74-940b296c2496",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e1cbb56-ec06-40e6-bf70-f3b6db4e1037",
+      "comment": "测试并验证 1+1=2",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef9716af-dcd3-46ca-b95e-1e06547f32b9",
+      "comment": "",
+      "command": "click",
+      "target": "id=simple1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fcba3cfe-9d4d-4c25-bc97-fe3c85e6052d",
+      "comment": "",
+      "command": "click",
+      "target": "id=simpleAdd",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30c3e9ce-f674-4010-ae4c-0c531a7b750b",
+      "comment": "",
+      "command": "click",
+      "target": "id=simple1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ebb9c6b-245a-4334-8b44-28bd1897c012",
+      "comment": "",
+      "command": "click",
+      "target": "id=simpleEqual",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eafadd2d-4b1f-4ae2-adaa-0d1295e5208b",
+      "comment": "",
+      "command": "verifyValue",
+      "target": "id=resultIpt",
+      "targets": [],
+      "value": "2"
+    }]
+  }],
+  "suites": [{
+    "id": "b9c4c616-91e8-400e-b13c-79f8ba8ac3af",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7d2ec2aa-63ca-409e-8c1e-8302dc3d1d9a"]
+  }],
+  "urls": ["http://www.zxjsq.net/"],
+  "plugins": []
+}
