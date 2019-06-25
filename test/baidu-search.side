@@ -1,0 +1,97 @@
+{
+  "id": "18fe06b2-ded0-4e33-acd3-072d127a7bbf",
+  "version": "2.0",
+  "name": "baidu",
+  "url": "https://www.baidu.com",
+  "tests": [{
+    "id": "ba0d7ceb-2842-4afb-bdd4-8324b2ae98a0",
+    "name": "search",
+    "commands": [{
+      "id": "a24321e4-9436-4113-8985-83b8ccf586b8",
+      "comment": "打开百度首页",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bd7fffdc-64b4-486a-a0a4-e1a8d13843da",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bedcab34-828e-4c3c-9166-7b7c51ae768c",
+      "comment": "执行搜索并验证结果",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "780082de-1ed6-4122-bd7a-ce6a07f8f47b",
+      "comment": "",
+      "command": "click",
+      "target": "id=kw",
+      "targets": [
+        ["id=kw", "id"],
+        ["name=wd", "name"],
+        ["css=#kw", "css:finder"],
+        ["xpath=//input[@id='kw']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "820ba272-fbd7-4e46-8200-45e40dc8e467",
+      "comment": "",
+      "command": "type",
+      "target": "id=kw",
+      "targets": [
+        ["id=kw", "id"],
+        ["name=wd", "name"],
+        ["css=#kw", "css:finder"],
+        ["xpath=//input[@id='kw']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": "selenium"
+    }, {
+      "id": "fdde4e07-50dd-430a-be91-0e3ea586d43f",
+      "comment": "",
+      "command": "click",
+      "target": "id=su",
+      "targets": [
+        ["id=su", "id"],
+        ["css=#su", "css:finder"],
+        ["xpath=//input[@id='su']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/span[2]/input", "xpath:idRelative"],
+        ["xpath=//span[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b060aa89-83e5-4548-87c6-2fe41708abbf",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//span[contains(.,'百度为您找到相关结果约')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96111ec9-e735-4ecf-bccf-0de9f04f686a",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "62d4eecc-c947-4bf4-b0bd-388aca1c5f68",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ba0d7ceb-2842-4afb-bdd4-8324b2ae98a0"]
+  }],
+  "urls": ["https://www.baidu.com/"],
+  "plugins": []
+}
