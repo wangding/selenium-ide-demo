@@ -1,0 +1,427 @@
+{
+  "id": "f4967773-6677-4c9e-9c0d-6ab0482a27fd",
+  "version": "2.0",
+  "name": "hostedredmine",
+  "url": "http://www.hostedredmine.com/",
+  "tests": [{
+    "id": "592f8af1-d439-4436-b8bc-20e2a35517f3",
+    "name": "1-login",
+    "commands": [{
+      "id": "5a8ce3a5-2106-4bf3-995b-280bb12b88da",
+      "comment": "一、打开 hostedredmine 网站首页",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a4940a8-783c-4ca4-9e1e-8be24098b004",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0566e32f-9e70-4fc8-97e4-2a47fc6c94b9",
+      "comment": "二、登录并验证登录状态",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0a85dfe-b93f-401a-9fcd-58053b4ee7e1",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [],
+      "value": "test_2016_1"
+    }, {
+      "id": "30290e71-3141-4293-954d-49a0d341f03b",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [],
+      "value": "Passw0rd!"
+    }, {
+      "id": "c0837f76-6d4d-4b96-ac10-c91477fdc6ff",
+      "comment": "",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28c4b351-bfef-49c7-8cd1-f7260eabc838",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=loggedas",
+      "targets": [],
+      "value": "2000"
+    }, {
+      "id": "71fc2ef4-0300-488b-871f-d26f607a8cf2",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "我的工作台 - Online Project Management :: Free Redmine Hosting",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d2fcdc9f-5b8b-470e-9edd-5d79d3e7add6",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=loggedas",
+      "targets": [],
+      "value": "登录为 test_2016_1"
+    }]
+  }, {
+    "id": "cca80872-ecf3-43b9-94ce-506e4c0a8d67",
+    "name": "3-logout",
+    "commands": [{
+      "id": "fa49e777-eba7-4d8f-8c9e-c95d3edc1643",
+      "comment": "",
+      "command": "open",
+      "target": "projects/auto_test_demo?jump=welcome",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "733b25fd-abd9-4b02-9bdd-a2a2e008378c",
+      "comment": "退出登录 hostedredmine",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6d0cb51-b68e-40c3-9b70-dc808f5e3ab5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=退出",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6df599ac-9e4c-4c8b-9487-96ac73f86fcc",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Online Project Management :: Free Redmine Hosting",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0202df3-2f69-47ff-97ce-51a00e429e11",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h1",
+      "targets": [],
+      "value": "Online Project Management :: Free Redmine Hosting"
+    }]
+  }, {
+    "id": "a9432607-6a47-4f0d-9711-237b0b4bc663",
+    "name": "2-issue",
+    "commands": [{
+      "id": "f70575fb-d65d-433e-9615-f0e6509b8777",
+      "comment": "",
+      "command": "open",
+      "target": "projects/auto_test_demo?jump=welcome",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c0407f27-7c55-4e44-9305-6487f92ff7dc",
+      "comment": "一、新建问题",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8b92ff9-af53-482f-9fd7-778563a07999",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=问题",
+      "targets": [
+        ["linkText=问题", "linkText"],
+        ["css=.issues:nth-child(1)", "css:finder"],
+        ["xpath=(//a[contains(text(),'问题')])[3]", "xpath:link"],
+        ["xpath=//div[@id='main-menu']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/projects/auto_test_demo/issues')])[2]", "xpath:href"],
+        ["xpath=//div[2]/ul/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7790fd0-38a8-47ff-a074-fd5943c4ecd5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=新建问题",
+      "targets": [
+        ["linkText=新建问题", "linkText"],
+        ["css=.icon-add", "css:finder"],
+        ["xpath=(//a[contains(text(),'新建问题')])[3]", "xpath:link"],
+        ["xpath=//div[@id='content']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/projects/auto_test_demo/issues/new')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bbe4f75-dd15-428b-8b50-62647e0683a9",
+      "comment": "",
+      "command": "click",
+      "target": "id=issue_subject",
+      "targets": [
+        ["id=issue_subject", "id"],
+        ["name=issue[subject]", "name"],
+        ["css=#issue_subject", "css:finder"],
+        ["xpath=//input[@id='issue_subject']", "xpath:attributes"],
+        ["xpath=//div[@id='all_attributes']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a5ebf3e-b7b1-4625-961e-da249ffb5aa0",
+      "comment": "",
+      "command": "type",
+      "target": "id=issue_subject",
+      "targets": [
+        ["id=issue_subject", "id"],
+        ["name=issue[subject]", "name"],
+        ["css=#issue_subject", "css:finder"],
+        ["xpath=//input[@id='issue_subject']", "xpath:attributes"],
+        ["xpath=//div[@id='all_attributes']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": "test"
+    }, {
+      "id": "6ee48d62-c8ba-4b4c-8d86-bf80b7a22902",
+      "comment": "",
+      "command": "click",
+      "target": "id=issue_description",
+      "targets": [
+        ["id=issue_description", "id"],
+        ["name=issue[description]", "name"],
+        ["css=#issue_description", "css:finder"],
+        ["xpath=//textarea[@id='issue_description']", "xpath:attributes"],
+        ["xpath=//span[@id='issue_description_and_toolbar']/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e950b5a-d01a-49eb-bbe0-f47b82c3bd8e",
+      "comment": "",
+      "command": "type",
+      "target": "id=issue_description",
+      "targets": [
+        ["id=issue_description", "id"],
+        ["name=issue[description]", "name"],
+        ["css=#issue_description", "css:finder"],
+        ["xpath=//textarea[@id='issue_description']", "xpath:attributes"],
+        ["xpath=//span[@id='issue_description_and_toolbar']/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "test"
+    }, {
+      "id": "181d5fd8-2127-4992-95c8-3b5109b5dfe0",
+      "comment": "",
+      "command": "click",
+      "target": "id=issue_assigned_to_id",
+      "targets": [
+        ["id=issue_assigned_to_id", "id"],
+        ["name=issue[assigned_to_id]", "name"],
+        ["css=#issue_assigned_to_id", "css:finder"],
+        ["xpath=//select[@id='issue_assigned_to_id']", "xpath:attributes"],
+        ["xpath=//div[@id='attributes']/div/div/p[3]/select", "xpath:idRelative"],
+        ["xpath=//p[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c35a8bf-df90-4d43-b3da-06ff062bf91e",
+      "comment": "",
+      "command": "select",
+      "target": "id=issue_assigned_to_id",
+      "targets": [],
+      "value": "label=<< 我 >>"
+    }, {
+      "id": "e4920185-3891-4e10-8c5f-5442f45f0d96",
+      "comment": "",
+      "command": "click",
+      "target": "css=#issue_assigned_to_id > option:nth-child(2)",
+      "targets": [
+        ["css=#issue_assigned_to_id > option:nth-child(2)", "css:finder"],
+        ["xpath=//option[@value='55933']", "xpath:attributes"],
+        ["xpath=//select[@id='issue_assigned_to_id']/option[2]", "xpath:idRelative"],
+        ["xpath=//p[3]/select/option[2]", "xpath:position"],
+        ["xpath=//option[contains(.,'<< 我 >>')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "285435bc-e128-4c58-95ad-dedea923b39d",
+      "comment": "",
+      "command": "click",
+      "target": "name=commit",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=#issue-form > input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//form[@id='issue-form']/input[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/form/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "792965d1-8cb5-4c6f-9fd0-69adb73dfe48",
+      "comment": "二、编辑问题",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3756b31f-e5d4-4dc2-8a27-ee240629978d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=编辑",
+      "targets": [
+        ["linkText=编辑", "linkText"],
+        ["css=.contextual:nth-child(2) > .icon-edit", "css:finder"],
+        ["xpath=//a[contains(text(),'编辑')]", "xpath:link"],
+        ["xpath=//a[@onclick='showAndScrollTo(\"update\", \"issue_notes\"); return false;']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/issues/823699/edit')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'编辑')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8d0be30-c3f4-4d7c-98c7-e5f84a8c7df7",
+      "comment": "",
+      "command": "click",
+      "target": "id=issue_status_id",
+      "targets": [
+        ["id=issue_status_id", "id"],
+        ["name=issue[status_id]", "name"],
+        ["css=#issue_status_id", "css:finder"],
+        ["xpath=//select[@id='issue_status_id']", "xpath:attributes"],
+        ["xpath=//div[@id='attributes']/div/div/p/select", "xpath:idRelative"],
+        ["xpath=//div/div/p/select", "xpath:position"],
+        ["xpath=//select[contains(.,'New\nAssigned\nIn Progress\nResolved\nApproved\nClosed\nRejected\nBlocked')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4b97cdf-e0e5-4d17-8000-3d0189e7d726",
+      "comment": "",
+      "command": "select",
+      "target": "id=issue_status_id",
+      "targets": [],
+      "value": "label=Closed"
+    }, {
+      "id": "7a7bac03-535c-4f0e-820c-21f5a54459a5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#issue_status_id > option:nth-child(6)",
+      "targets": [
+        ["css=#issue_status_id > option:nth-child(6)", "css:finder"],
+        ["xpath=//option[@value='5']", "xpath:attributes"],
+        ["xpath=//select[@id='issue_status_id']/option[6]", "xpath:idRelative"],
+        ["xpath=//div/div/p/select/option[6]", "xpath:position"],
+        ["xpath=//option[contains(.,'Closed')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "57533781-4df3-43ef-8f1d-258c3154a607",
+      "comment": "",
+      "command": "click",
+      "target": "id=issue_done_ratio",
+      "targets": [
+        ["id=issue_done_ratio", "id"],
+        ["name=issue[done_ratio]", "name"],
+        ["css=#issue_done_ratio", "css:finder"],
+        ["xpath=//select[@id='issue_done_ratio']", "xpath:attributes"],
+        ["xpath=//div[@id='attributes']/div/div[2]/p[5]/select", "xpath:idRelative"],
+        ["xpath=//p[5]/select", "xpath:position"],
+        ["xpath=//select[contains(.,'0 %\n10 %\n20 %\n30 %\n40 %\n50 %\n60 %\n70 %\n80 %\n90 %\n100 %')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d6b43a6-077e-4f7c-9e81-6a84d886fab6",
+      "comment": "",
+      "command": "select",
+      "target": "id=issue_done_ratio",
+      "targets": [],
+      "value": "label=100 %"
+    }, {
+      "id": "a96d8d57-ad26-4426-b5a6-dddff2159678",
+      "comment": "",
+      "command": "click",
+      "target": "css=#issue_done_ratio > option:nth-child(11)",
+      "targets": [
+        ["css=#issue_done_ratio > option:nth-child(11)", "css:finder"],
+        ["xpath=//option[@value='100']", "xpath:attributes"],
+        ["xpath=//select[@id='issue_done_ratio']/option[11]", "xpath:idRelative"],
+        ["xpath=//p[5]/select/option[11]", "xpath:position"],
+        ["xpath=//option[contains(.,'100 %')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1921750e-f265-48b4-94dd-73fd1ffd7265",
+      "comment": "",
+      "command": "click",
+      "target": "id=issue_notes",
+      "targets": [
+        ["id=issue_notes", "id"],
+        ["name=issue[notes]", "name"],
+        ["css=#issue_notes", "css:finder"],
+        ["xpath=//textarea[@id='issue_notes']", "xpath:attributes"],
+        ["xpath=//form[@id='issue-form']/div/fieldset[3]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//fieldset[3]/div[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fce2f776-d01b-4921-9d5d-ed6736aec8a1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@name='commit'])[2]",
+      "targets": [
+        ["css=input:nth-child(7)", "css:finder"],
+        ["xpath=(//input[@name='commit'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='issue-form']/input[6]", "xpath:idRelative"],
+        ["xpath=//input[6]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cba47417-43ab-4e7c-bd5c-0bea477d2f28",
+      "comment": "三、删除问题",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5b925e0-0e45-4a8c-a6c3-4366751e10f1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=删除",
+      "targets": [
+        ["linkText=删除", "linkText"],
+        ["css=.contextual:nth-child(1) > .icon-del", "css:finder"],
+        ["xpath=//a[contains(text(),'删除')]", "xpath:link"],
+        ["xpath=//div[@id='content']/div/a[5]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/issues/827492')])[4]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'删除')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a94de00-a376-4c71-b3fe-3a90b1a1bf05",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "您确定要删除选中的问题吗？",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d48d228-d0c0-406c-921a-883196737e5c",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "cfc84f7d-5753-4f08-8add-edcf4a8a9519",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["592f8af1-d439-4436-b8bc-20e2a35517f3", "a9432607-6a47-4f0d-9711-237b0b4bc663", "cca80872-ecf3-43b9-94ce-506e4c0a8d67"]
+  }],
+  "urls": ["http://www.hostedredmine.com/"],
+  "plugins": []
+}
