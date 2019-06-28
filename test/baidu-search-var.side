@@ -1,0 +1,83 @@
+{
+  "id": "161181c5-e8a0-4f6a-81f5-d177e97fbdd8",
+  "version": "2.0",
+  "name": "baidu",
+  "url": "https://www.baidu.com",
+  "tests": [{
+    "id": "db160a9b-da9c-4bc4-82b3-f714ade41944",
+    "name": "search-var",
+    "commands": [{
+      "id": "07e3c2e2-69a4-47c4-8d54-075fc170f25f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ad16b68-8dd5-4eca-87a1-6ec9eecf556e",
+      "comment": "",
+      "command": "click",
+      "target": "id=kw",
+      "targets": [
+        ["id=kw", "id"],
+        ["name=wd", "name"],
+        ["css=#kw", "css:finder"],
+        ["xpath=//input[@id='kw']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b77543ac-4c83-4f5a-a693-77c240c4a198",
+      "comment": "",
+      "command": "storeTitle",
+      "target": "",
+      "targets": [],
+      "value": "ttl"
+    }, {
+      "id": "5fa10031-878c-41f4-82fc-86026902b879",
+      "comment": "",
+      "command": "echo",
+      "target": "${ttl}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "79fa7deb-f7df-439e-8895-445a5db13a25",
+      "comment": "",
+      "command": "type",
+      "target": "id=kw",
+      "targets": [
+        ["id=kw", "id"],
+        ["name=wd", "name"],
+        ["css=#kw", "css:finder"],
+        ["xpath=//input[@id='kw']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": "${ttl}"
+    }, {
+      "id": "386f9148-68ab-480d-85b7-9b1611176ee3",
+      "comment": "",
+      "command": "click",
+      "target": "id=su",
+      "targets": [
+        ["id=su", "id"],
+        ["css=#su", "css:finder"],
+        ["xpath=//input[@id='su']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/span[2]/input", "xpath:idRelative"],
+        ["xpath=//span[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f29cf601-95f0-4b99-8a62-ef3a54d96768",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["db160a9b-da9c-4bc4-82b3-f714ade41944"]
+  }],
+  "urls": ["https://www.baidu.com/"],
+  "plugins": []
+}
