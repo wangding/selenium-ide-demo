@@ -1,0 +1,121 @@
+{
+  "id": "8a73a9fd-57ad-48b2-ba7c-678bd273445f",
+  "version": "2.0",
+  "name": "locator",
+  "url": "https://sample.wangding.in/",
+  "tests": [{
+    "id": "4dd8b3e7-285b-4520-b185-9a03ca44f81f",
+    "name": "1-id",
+    "commands": [{
+      "id": "77bd741e-190a-4e20-b286-e533ebc863e2",
+      "comment": "",
+      "command": "open",
+      "target": "selenium/locator.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f2267a0-3be1-4d83-a85b-cf091684daf0",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [],
+      "value": "wangding"
+    }]
+  }, {
+    "id": "31cd2afd-1c9c-4b91-be4a-4547778f5326",
+    "name": "2-name",
+    "commands": [{
+      "id": "6b5f9409-91f6-4c04-b31b-196b908b0e41",
+      "comment": "",
+      "command": "open",
+      "target": "selenium/locator.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "29905f51-8972-4acf-b729-e7e3807a9e18",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [],
+      "value": "louying"
+    }]
+  }, {
+    "id": "0fb6203f-324e-49bd-87c5-1897fac84a2f",
+    "name": "3-linkText",
+    "commands": [{
+      "id": "5c2921c1-7bb9-4901-9088-be5fc0224787",
+      "comment": "",
+      "command": "open",
+      "target": "selenium/locator.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dbfbc0e9-346a-4f9f-bf94-030ef02d9cc4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=alert 页面",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "cb1269bd-c8c2-459b-807b-14fd80c44635",
+    "name": "4-css",
+    "commands": [{
+      "id": "b63293d9-747f-4086-9027-2e93486bd736",
+      "comment": "",
+      "command": "open",
+      "target": "selenium/locator.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3e24afb-754b-4799-9ce0-916063ec179b",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1724515-48dc-457e-a8e4-b0741ba72b32",
+      "comment": "",
+      "command": "type",
+      "target": "css=input[name=\"username\"]",
+      "targets": [],
+      "value": "wangding"
+    }, {
+      "id": "41b4e0eb-0826-49d0-8dff-401218163309",
+      "comment": "",
+      "command": "type",
+      "target": "css=.required",
+      "targets": [],
+      "value": "123"
+    }]
+  }, {
+    "id": "51a6318d-9a09-499f-9b7d-29b8c1e58384",
+    "name": "5-xpath",
+    "commands": [{
+      "id": "85301e3e-7f53-46d6-9393-cc3d45a8b035",
+      "comment": "",
+      "command": "open",
+      "target": "selenium/locator.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e13ff957-9944-4f2c-a479-10fec9e16555",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//form/input[@id=\"username\"]",
+      "targets": [],
+      "value": "wangding"
+    }]
+  }],
+  "suites": [{
+    "id": "db1e17eb-e6a1-4c55-bd9c-f99bff349f37",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4dd8b3e7-285b-4520-b185-9a03ca44f81f"]
+  }],
+  "urls": ["http://sample.wangding.in/", "https://sample.wangding.in/"],
+  "plugins": []
+}
