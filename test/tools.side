@@ -1,0 +1,295 @@
+{
+  "id": "5b4ae3f2-64d9-4ab0-895d-b18d511b4ac8",
+  "version": "2.0",
+  "name": "tools",
+  "url": "http://tool.chinaz.com",
+  "tests": [{
+    "id": "e964dbed-fdb1-4156-8702-865a94620614",
+    "name": "link-test",
+    "commands": [{
+      "id": "647b8de6-1977-4520-b262-5b03371d51a1",
+      "comment": "",
+      "command": "open",
+      "target": "http://tool.chinaz.com",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "755a3ac8-a000-4745-bd64-5c4f379061a6",
+      "comment": "测试域名 Whois 查询工具",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf9274ce-3b93-4421-8703-784a94e16139",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=WHOIS查询",
+      "targets": [
+        ["linkText=WHOIS查询", "linkText"],
+        ["css=.GMFocusBox:nth-child(5) .fl:nth-child(1) a:nth-child(1)", "css:finder"],
+        ["xpath=(//a[contains(text(),'WHOIS查询')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//whois.chinaz.com')])[3]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/ul/li/p/a", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win163",
+      "windowTimeout": 2000
+    }, {
+      "id": "36b45977-f3db-4435-8c21-c444cb840ed6",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "07df484a-89e3-4d71-b765-9fb5149bd14c",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win163}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ccb2d837-a08d-4b4e-b60e-4f799d0f769a",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "域名Whois查询 - 站长之家",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f053943f-145c-4b92-bee2-48ac302b22c6",
+      "comment": "测试过期严明查询工具",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc84a3b3-ac3f-4ba0-aa4d-8d1215b96bd6",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "323617ac-4ed5-4641-b31f-d7b0e5fb9a0c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=过期域名查询",
+      "targets": [
+        ["linkText=过期域名查询", "linkText"],
+        ["css=.GMFocusBox:nth-child(5) .fl:nth-child(1) a:nth-child(3)", "css:finder"],
+        ["xpath=(//a[contains(text(),'过期域名查询')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//del.chinaz.com')])[2]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/ul/li/p/a[3]", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win8532",
+      "windowTimeout": 2000
+    }, {
+      "id": "64212cee-a3c0-4015-88b9-e0b8d75fdc59",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win8532}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "decfa538-abbe-4da5-808c-aaba7b4c5a8c",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "过期域名查询 - 国际域名 - 站长工具",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72d59ce5-2801-4a97-9056-375a7092aa64",
+      "comment": "测试域名删除时间工具",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d294bd86-8150-423e-9ffd-e9b8c3de361c",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d1044e6-ccca-42e3-8086-88f54c424c28",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=域名删除时间",
+      "targets": [
+        ["linkText=域名删除时间", "linkText"],
+        ["css=.GMFocusBox:nth-child(5) .fl:nth-child(1) a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'域名删除时间')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//tool.chinaz.com/DomainDel/')])[2]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/ul/li/p/a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'域名删除时间')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win1344",
+      "windowTimeout": 2000
+    }, {
+      "id": "9d6abe87-54c8-4c8f-97fa-13e1bc945846",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win1344}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c590356b-ee11-4371-8bc9-e9f721e6a10c",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "域名删除时间查询",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f169157b-cf08-43b8-8b2b-1a9760a3a7bd",
+      "comment": "测试删除域名归档工具",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8c0824a-f77a-4665-bc3b-9fe8b047cda3",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5199c4d7-d074-4c45-ae6c-72e76be39ee8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=删除域名归档",
+      "targets": [
+        ["linkText=删除域名归档", "linkText"],
+        ["css=.GMFocusBox:nth-child(5) .fl:nth-child(1) a:nth-child(7)", "css:finder"],
+        ["xpath=//a[contains(text(),'删除域名归档')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '//del.chinaz.com/type')]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/ul/li/p/a[7]", "xpath:position"],
+        ["xpath=//a[contains(.,'删除域名归档')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win8122",
+      "windowTimeout": 2000
+    }, {
+      "id": "e951f5ce-5f47-4f90-bb68-049c721bc3c2",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win8122}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c9bfe4c-1dbf-4826-81b1-38de5dad2a0e",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "2019-07-03 删除 有权重 的域名列表--删除域名分类列表",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e12b6d33-e4c6-4c30-8ecc-4eaba469ed4b",
+      "comment": "测试备案查询工具",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67369cda-9d21-4445-bddd-cb967749aa40",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51772546-79f0-4e33-8b49-13a6991f91eb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=备案查询",
+      "targets": [
+        ["linkText=备案查询", "linkText"],
+        ["css=.GMFocusBox:nth-child(5) .fl:nth-child(1) a:nth-child(6)", "css:finder"],
+        ["xpath=(//a[contains(text(),'备案查询')])[3]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//icp.chinaz.com')])[4]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/ul/li/p/a[6]", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win5160",
+      "windowTimeout": 2000
+    }, {
+      "id": "2a4b09d4-78e8-4dd0-b18e-d76d98c6b234",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win5160}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef31880d-6371-4ecf-8d03-6e94d58139f3",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "ICP备案查询 - 站长工具",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f682be9-a3af-4b17-8eaa-b35ac0249888",
+      "comment": "测试备案批量查询工具",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8a7d8f4-77ff-406b-9cf3-c9167c9e4217",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b13b74f7-3759-4ead-907a-97fb830f338f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=备案批量查询",
+      "targets": [
+        ["linkText=备案批量查询", "linkText"],
+        ["css=.GMFocusBox:nth-child(5) .fl:nth-child(1) a:nth-child(8)", "css:finder"],
+        ["xpath=//a[contains(text(),'备案批量查询')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '//icp.chinaz.com/searchs')]", "xpath:href"],
+        ["xpath=//li/p/a[8]", "xpath:position"],
+        ["xpath=//a[contains(.,'备案批量查询')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win106",
+      "windowTimeout": 2000
+    }, {
+      "id": "545aba5a-445b-4a2a-9447-cb0409974705",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win106}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f30325d7-f084-4717-97ab-c8d9581d626a",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "批量查询 - 站长工具",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0cbb2fb6-7072-4c28-8c20-fea2d8f9cee2",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e964dbed-fdb1-4156-8702-865a94620614"]
+  }],
+  "urls": ["http://tool.chinaz.com/"],
+  "plugins": []
+}
