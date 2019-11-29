@@ -361,6 +361,60 @@
       ],
       "value": "已经确认。"
     }]
+  }, {
+    "id": "fdcfeea5-bc42-4de3-b04f-d1f8cc7bb2bc",
+    "name": "4-window",
+    "commands": [{
+      "id": "c5161004-282e-4d1f-9eff-3d7c43d8567a",
+      "comment": "打开被测页面",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18c6f98e-f9c6-4f47-9d52-26072a076d75",
+      "comment": "",
+      "command": "open",
+      "target": "selenium/alert.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8cc35d4c-4f3b-4d6d-8ce7-8cea183e4c2b",
+      "comment": "弹出浏览器窗口，载入百度页面，验证页面标题",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a53c8ec-5b66-4dd0-b549-ccbebf685ca7",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnWindow",
+      "targets": [
+        ["id=btnWindow", "id"],
+        ["css=#btnWindow", "css:finder"],
+        ["xpath=//input[@id='btnWindow']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win1471",
+      "windowTimeout": 2000
+    }, {
+      "id": "0019dcbb-34ba-4f92-ad64-897ebc7c34e2",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win1471}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f861deb1-7acb-4151-ab62-95e758ee4b81",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "百度一下，你就知道",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "f4b655ad-c5c2-41f6-8fa9-79ae5a3dadcb",
