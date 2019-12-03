@@ -1,0 +1,102 @@
+{
+  "id": "943ac74b-0cff-4c39-a49d-21bd3d6c7989",
+  "version": "2.0",
+  "name": "flow",
+  "url": "https://www.baidu.com",
+  "tests": [{
+    "id": "63677d7b-5261-49b5-9e96-8b6e58d9711b",
+    "name": "1-judge",
+    "commands": [{
+      "id": "cb7f95a5-789d-44ba-9263-bddca519c771",
+      "comment": "",
+      "command": "store",
+      "target": "25",
+      "targets": [],
+      "value": "age"
+    }, {
+      "id": "58a50c0d-8296-475c-8960-bff54449dc52",
+      "comment": "",
+      "command": "if",
+      "target": "${age} > 20",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb88e2dd-d4dc-4c73-baca-e0febaf016c2",
+      "comment": "",
+      "command": "echo",
+      "target": "你是个男人",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c77ad4d-0675-4fac-ba3a-3519ab5e0923",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3f382f4-4dfe-440b-b3c0-82553f4f3007",
+      "comment": "",
+      "command": "echo",
+      "target": "你是个男孩",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d7d0b091-bc2b-4ecc-9987-6f56ae3037db",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a6e3d9b7-a808-43eb-8188-7264fc06b3bf",
+    "name": "2-loop",
+    "commands": [{
+      "id": "6172dec8-1ac0-4026-8541-288c9a06867a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0;",
+      "targets": [],
+      "value": "n"
+    }, {
+      "id": "b188a6e1-4951-452e-8a53-39cd54c30274",
+      "comment": "",
+      "command": "times",
+      "target": "10",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ef41673-bb7f-46dd-a1bc-ea6ff72ea737",
+      "comment": "",
+      "command": "echo",
+      "target": "${n}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03fc33d1-1470-4d0f-97d8-8deb9c6eab40",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${n}+1;",
+      "targets": [],
+      "value": "n"
+    }, {
+      "id": "8eeac685-de57-453f-8629-5f0be903e36c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ed5a041f-9462-4c9b-ae41-2f23a5b4f9e2",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["63677d7b-5261-49b5-9e96-8b6e58d9711b"]
+  }],
+  "urls": ["https://www.baidu.com/"],
+  "plugins": []
+}
