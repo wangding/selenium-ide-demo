@@ -71,6 +71,13 @@
     }, {
       "id": "b060aa89-83e5-4548-87c6-2fe41708abbf",
       "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//span[contains(.,'百度为您找到相关结果约')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "777221bf-709a-4e39-97b3-6c6b9a1c730a",
+      "comment": "",
       "command": "verifyElementPresent",
       "target": "xpath=//span[contains(.,'百度为您找到相关结果约')]",
       "targets": [],
