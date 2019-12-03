@@ -1,0 +1,63 @@
+{
+  "id": "059302b0-270f-498d-8917-8ef3e6ffa8ba",
+  "version": "2.0",
+  "name": "sum",
+  "url": "https://www.baidu.com",
+  "tests": [{
+    "id": "d89cce02-cb52-44cb-a74c-0e5aeeedfabb",
+    "name": "1-sum",
+    "commands": [{
+      "id": "6bb484c2-49b7-4974-a357-7d02e8c10450",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82681df8-7137-420f-8dec-9e027d29a0f1",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "x"
+    }, {
+      "id": "62e78423-ad35-47a2-9aa4-86dbd006f826",
+      "comment": "",
+      "command": "store",
+      "target": "2",
+      "targets": [],
+      "value": "y"
+    }, {
+      "id": "0ffa7680-caed-40bf-9314-29adc222518f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${x}) + Number(${y})",
+      "targets": [],
+      "value": "z"
+    }, {
+      "id": "a9f8e83e-e82c-4777-9901-0e69ed1cb787",
+      "comment": "",
+      "command": "echo",
+      "target": "x + y = ${z}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0939eafa-a519-434d-911a-3023050e6169",
+      "comment": "",
+      "command": "executeScript",
+      "target": "alert(\"x + y = \" + ${z})",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "eb3013a6-dbaa-4525-b913-6d06d4d9e423",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d89cce02-cb52-44cb-a74c-0e5aeeedfabb"]
+  }],
+  "urls": ["https://www.baidu.com/"],
+  "plugins": []
+}
