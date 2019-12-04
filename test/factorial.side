@@ -1,0 +1,70 @@
+{
+  "id": "17a90a98-b2ed-4ba4-939f-645ec76fd9f6",
+  "version": "2.0",
+  "name": "factorial",
+  "url": "https://www.baidu.com",
+  "tests": [{
+    "id": "9c6ca857-158e-44fe-b753-fce9b5614680",
+    "name": "factorial",
+    "commands": [{
+      "id": "a338eb66-12e1-4def-addd-41e73949a8c3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 5",
+      "targets": [],
+      "value": "n"
+    }, {
+      "id": "13b8b09d-058a-4196-afda-c599b8dbe0e9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "f41363c9-67cb-4c76-8852-9e9351014d1c",
+      "comment": "",
+      "command": "while",
+      "target": "${n} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64b4a0e6-ca7f-4c9e-be52-20d661f75d45",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${result} * ${n}",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "d8668940-2d05-48b6-a07b-7518aeb6ded7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${n} - 1",
+      "targets": [],
+      "value": "n"
+    }, {
+      "id": "da78765b-c716-4ab6-baa6-f95789f6070f",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "540dfede-4dc7-49fb-bf35-5d5ee2863afb",
+      "comment": "",
+      "command": "echo",
+      "target": "5! = ${result}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "3844d0d3-006c-474c-9178-2825b71391a8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9c6ca857-158e-44fe-b753-fce9b5614680"]
+  }],
+  "urls": ["https://www.baidu.com/"],
+  "plugins": []
+}
