@@ -1,0 +1,141 @@
+{
+  "id": "1ae6035e-f540-40fa-84a1-20020904e77a",
+  "version": "2.0",
+  "name": "baidu",
+  "url": "https://www.baidu.com",
+  "tests": [{
+    "id": "707ff728-9e51-4c6b-81e6-5be066c1b5a6",
+    "name": "baidu",
+    "commands": [{
+      "id": "03bf546f-463b-4043-b0ae-2e1da438a2e0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [\"Selenium IDE 51CTO\", \"Selenium IDE WEB 自动化测试入门 51CTO\", \"信息科学基础 51CTO\", \"在线思维导图进阶 51CTO\"]",
+      "targets": [],
+      "value": "kws"
+    }, {
+      "id": "43e6e5d3-d334-42b3-acea-a2b2a16bf183",
+      "comment": "",
+      "command": "forEach",
+      "target": "kws",
+      "targets": [],
+      "value": "kw"
+    }, {
+      "id": "85ec84bb-1a6e-49d7-9e1a-3405ff117620",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3729af83-b6d8-4809-b810-e7006015769c",
+      "comment": "",
+      "command": "type",
+      "target": "id=kw",
+      "targets": [
+        ["id=kw", "id"],
+        ["name=wd", "name"],
+        ["css=#kw", "css:finder"],
+        ["xpath=//input[@id='kw']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": "${kw}"
+    }, {
+      "id": "d6412356-9760-47de-9f6e-9d87f98715ba",
+      "comment": "",
+      "command": "click",
+      "target": "id=su",
+      "targets": [
+        ["id=su", "id"],
+        ["css=#su", "css:finder"],
+        ["xpath=//input[@id='su']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/span[2]/input", "xpath:idRelative"],
+        ["xpath=//span[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d1c6586-de67-4429-8484-80a6afbc502f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//span[contains(.,'百度为您找到相关结果约')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "c61813e5-7982-4459-8f17-7abfd6321c4a",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.nums_text",
+      "targets": [
+        ["css=.nums_text", "css:finder"],
+        ["xpath=//div[@id='container']/div[2]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'百度为您找到相关结果约883,000个')]", "xpath:innerText"]
+      ],
+      "value": "num"
+    }, {
+      "id": "a04f2f2f-b08b-4776-9105-3d276c29ff7a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${num}.match(/(\\d)+/g).join(',')",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "85bed2c0-7de9-4b8b-9167-a88fc67c6622",
+      "comment": "",
+      "command": "echo",
+      "target": "|   ${kw}   |   ${num}    |",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2960c56d-9c4e-4c8e-a6be-ecffd6637958",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "${kw}_百度搜索",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "605bee61-1d00-4f80-93be-5e7046397452",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9149b2ed-47a2-4c2b-a1b4-b4a9ccd43383",
+    "name": "regex",
+    "commands": [{
+      "id": "4fc92ad2-ef01-45a6-b3ec-5eaf219c4e84",
+      "comment": "",
+      "command": "store",
+      "target": "百度为您找到相关结果约883,000个",
+      "targets": [],
+      "value": "msg"
+    }, {
+      "id": "f2da90d8-e117-45fa-9355-b885df48ff58",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${msg}.match(/(\\d)+/g).join(',')",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "305d6550-4a1b-46ca-a828-68e4e8401f35",
+      "comment": "",
+      "command": "echo",
+      "target": "${num}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "62cf7539-bc32-4821-beb0-e5dc6fd0ce2b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["707ff728-9e51-4c6b-81e6-5be066c1b5a6"]
+  }],
+  "urls": ["https://www.baidu.com/"],
+  "plugins": []
+}
