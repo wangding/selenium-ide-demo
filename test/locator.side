@@ -2,7 +2,7 @@
   "id": "8a73a9fd-57ad-48b2-ba7c-678bd273445f",
   "version": "2.0",
   "name": "locator",
-  "url": "https://sample.wangding.in/",
+  "url": "https://sample.wangding.co/",
   "tests": [{
     "id": "4dd8b3e7-285b-4520-b185-9a03ca44f81f",
     "name": "1-id",
@@ -116,6 +116,6 @@
     "timeout": 300,
     "tests": ["4dd8b3e7-285b-4520-b185-9a03ca44f81f"]
   }],
-  "urls": ["http://sample.wangding.in/", "https://sample.wangding.in/"],
+  "urls": ["http://sample.wangding.co/", "https://sample.wangding.co/"],
   "plugins": []
 }

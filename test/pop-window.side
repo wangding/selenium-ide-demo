@@ -2,7 +2,7 @@
   "id": "e9317a08-e990-4dbd-ab17-8e745f90fa99",
   "version": "2.0",
   "name": "pop-window",
-  "url": "https://sample.wangding.in/",
+  "url": "https://sample.wangding.co/",
   "tests": [{
     "id": "ab95c1af-c4a6-426e-b18e-a8579b81ba3f",
     "name": "1-alert",
@@ -424,6 +424,6 @@
     "timeout": 300,
     "tests": ["ab95c1af-c4a6-426e-b18e-a8579b81ba3f"]
   }],
-  "urls": ["https://sample.wangding.in/selenium/alert.html", "https://sample.wangding.in/"],
+  "urls": ["https://sample.wangding.co/selenium/alert.html", "https://sample.wangding.co/"],
   "plugins": []
 }
